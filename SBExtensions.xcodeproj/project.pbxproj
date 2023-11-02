@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		94DDD2112AF32CFB00077AA6 /* SBExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94DDD2082AF32CFB00077AA6 /* SBExtensions.framework */; };
-		94DDD2242AF32D3300077AA6 /* SBExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 94DDD2212AF32D3300077AA6 /* SBExtensions.h */; };
 		94DDD2272AF32D4800077AA6 /* SBExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +24,6 @@
 /* Begin PBXFileReference section */
 		94DDD2082AF32CFB00077AA6 /* SBExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SBExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DDD2102AF32CFB00077AA6 /* SBExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94DDD2212AF32D3300077AA6 /* SBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBExtensions.h; sourceTree = "<group>"; };
 		94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBExtensionsTests.swift; path = Tests/SBExtensionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +67,6 @@
 		94DDD2202AF32D3300077AA6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				94DDD2212AF32D3300077AA6 /* SBExtensions.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -89,7 +86,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94DDD2242AF32D3300077AA6 /* SBExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
