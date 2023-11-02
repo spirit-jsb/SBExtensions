@@ -11,6 +11,7 @@
 		94DDD2272AF32D4800077AA6 /* SBExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */; };
 		94DDD22B2AF3340400077AA6 /* WKWebViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD22A2AF3340400077AA6 /* WKWebViewExtensions.swift */; };
 		94DDD22E2AF3368400077AA6 /* DispatchQueueExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD22D2AF3368400077AA6 /* DispatchQueueExtensions.swift */; };
+		94DDD2312AF3389E00077AA6 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD2302AF3389E00077AA6 /* UITableViewExtensions.swift */; };
 		94DDD2332AF338E400077AA6 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD2322AF338E400077AA6 /* NibLoadable.swift */; };
 		94DDD2372AF33AD800077AA6 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD2362AF33AD800077AA6 /* UICollectionViewExtensions.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBExtensionsTests.swift; path = Tests/SBExtensionsTests.swift; sourceTree = "<group>"; };
 		94DDD22A2AF3340400077AA6 /* WKWebViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewExtensions.swift; sourceTree = "<group>"; };
 		94DDD22D2AF3368400077AA6 /* DispatchQueueExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtensions.swift; sourceTree = "<group>"; };
+		94DDD2302AF3389E00077AA6 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		94DDD2322AF338E400077AA6 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		94DDD2362AF33AD800077AA6 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				94DDD2362AF33AD800077AA6 /* UICollectionViewExtensions.swift */,
+				94DDD2302AF3389E00077AA6 /* UITableViewExtensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94DDD2372AF33AD800077AA6 /* UICollectionViewExtensions.swift in Sources */,
+				94DDD2312AF3389E00077AA6 /* UITableViewExtensions.swift in Sources */,
 				94DDD2332AF338E400077AA6 /* NibLoadable.swift in Sources */,
 				94DDD22B2AF3340400077AA6 /* WKWebViewExtensions.swift in Sources */,
 				94DDD22E2AF3368400077AA6 /* DispatchQueueExtensions.swift in Sources */,
