@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		94DDD2112AF32CFB00077AA6 /* SBExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94DDD2082AF32CFB00077AA6 /* SBExtensions.framework */; };
 		94DDD2272AF32D4800077AA6 /* SBExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */; };
+		94DDD22B2AF3340400077AA6 /* WKWebViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD22A2AF3340400077AA6 /* WKWebViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +26,7 @@
 		94DDD2082AF32CFB00077AA6 /* SBExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SBExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DDD2102AF32CFB00077AA6 /* SBExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBExtensionsTests.swift; path = Tests/SBExtensionsTests.swift; sourceTree = "<group>"; };
+		94DDD22A2AF3340400077AA6 /* WKWebViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		94DDD2202AF32D3300077AA6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				94DDD2282AF333F200077AA6 /* WebKit */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -77,6 +80,14 @@
 				94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		94DDD2282AF333F200077AA6 /* WebKit */ = {
+			isa = PBXGroup;
+			children = (
+				94DDD22A2AF3340400077AA6 /* WKWebViewExtensions.swift */,
+			);
+			path = WebKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 				TargetAttributes = {
 					94DDD2072AF32CFB00077AA6 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 					94DDD20F2AF32CFB00077AA6 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -188,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DDD22B2AF3340400077AA6 /* WKWebViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +348,7 @@
 		94DDD21B2AF32CFB00077AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -361,6 +375,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = "";
@@ -371,6 +386,7 @@
 		94DDD21C2AF32CFB00077AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -407,6 +423,7 @@
 		94DDD21E2AF32CFB00077AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -430,6 +447,7 @@
 		94DDD21F2AF32CFB00077AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
