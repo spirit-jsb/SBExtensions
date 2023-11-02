@@ -13,6 +13,7 @@
 		9426F06E2AF383EA0036B3AC /* UIScreenExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F06D2AF383EA0036B3AC /* UIScreenExtensions.swift */; };
 		9426F0702AF3868E0036B3AC /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F06F2AF3868E0036B3AC /* UIStackViewExtensions.swift */; };
 		9426F0742AF389C10036B3AC /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0732AF389C10036B3AC /* UIColorExtensions.swift */; };
+		9426F0762AF38E070036B3AC /* UIWindowExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0752AF38E070036B3AC /* UIWindowExtensions.swift */; };
 		94DDD2112AF32CFB00077AA6 /* SBExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94DDD2082AF32CFB00077AA6 /* SBExtensions.framework */; };
 		94DDD2272AF32D4800077AA6 /* SBExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */; };
 		94DDD22B2AF3340400077AA6 /* WKWebViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD22A2AF3340400077AA6 /* WKWebViewExtensions.swift */; };
@@ -39,6 +40,7 @@
 		9426F06D2AF383EA0036B3AC /* UIScreenExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtensions.swift; sourceTree = "<group>"; };
 		9426F06F2AF3868E0036B3AC /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
 		9426F0732AF389C10036B3AC /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		9426F0752AF38E070036B3AC /* UIWindowExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowExtensions.swift; sourceTree = "<group>"; };
 		94DDD2082AF32CFB00077AA6 /* SBExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SBExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DDD2102AF32CFB00077AA6 /* SBExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBExtensionsTests.swift; path = Tests/SBExtensionsTests.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				9426F06D2AF383EA0036B3AC /* UIScreenExtensions.swift */,
 				9426F06F2AF3868E0036B3AC /* UIStackViewExtensions.swift */,
 				94DDD2302AF3389E00077AA6 /* UITableViewExtensions.swift */,
+				9426F0752AF38E070036B3AC /* UIWindowExtensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				9426F06A2AF382CE0036B3AC /* UIFontExtensions.swift in Sources */,
 				9426F06C2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift in Sources */,
 				94DDD2312AF3389E00077AA6 /* UITableViewExtensions.swift in Sources */,
+				9426F0762AF38E070036B3AC /* UIWindowExtensions.swift in Sources */,
 				9426F0702AF3868E0036B3AC /* UIStackViewExtensions.swift in Sources */,
 				9426F0742AF389C10036B3AC /* UIColorExtensions.swift in Sources */,
 				94DDD2332AF338E400077AA6 /* NibLoadable.swift in Sources */,
