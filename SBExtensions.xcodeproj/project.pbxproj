@@ -11,6 +11,7 @@
 		94DDD2272AF32D4800077AA6 /* SBExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */; };
 		94DDD22B2AF3340400077AA6 /* WKWebViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD22A2AF3340400077AA6 /* WKWebViewExtensions.swift */; };
 		94DDD22E2AF3368400077AA6 /* DispatchQueueExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD22D2AF3368400077AA6 /* DispatchQueueExtensions.swift */; };
+		94DDD2332AF338E400077AA6 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD2322AF338E400077AA6 /* NibLoadable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBExtensionsTests.swift; path = Tests/SBExtensionsTests.swift; sourceTree = "<group>"; };
 		94DDD22A2AF3340400077AA6 /* WKWebViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewExtensions.swift; sourceTree = "<group>"; };
 		94DDD22D2AF3368400077AA6 /* DispatchQueueExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtensions.swift; sourceTree = "<group>"; };
+		94DDD2322AF338E400077AA6 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		94DDD2202AF32D3300077AA6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				94DDD2322AF338E400077AA6 /* NibLoadable.swift */,
 				94DDD22C2AF3366D00077AA6 /* Dispatch */,
 				94DDD2282AF333F200077AA6 /* WebKit */,
 			);
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DDD2332AF338E400077AA6 /* NibLoadable.swift in Sources */,
 				94DDD22B2AF3340400077AA6 /* WKWebViewExtensions.swift in Sources */,
 				94DDD22E2AF3368400077AA6 /* DispatchQueueExtensions.swift in Sources */,
 			);
