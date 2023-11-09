@@ -16,6 +16,7 @@
 		9426F0762AF38E070036B3AC /* UIWindowExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0752AF38E070036B3AC /* UIWindowExtensions.swift */; };
 		9426F0782AF3901D0036B3AC /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0772AF3901D0036B3AC /* UIScrollViewExtensions.swift */; };
 		9471292F2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471292E2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift */; };
+		947129342AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947129332AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift */; };
 		94DDD2112AF32CFB00077AA6 /* SBExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94DDD2082AF32CFB00077AA6 /* SBExtensions.framework */; };
 		94DDD2272AF32D4800077AA6 /* SBExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */; };
 		94DDD22B2AF3340400077AA6 /* WKWebViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD22A2AF3340400077AA6 /* WKWebViewExtensions.swift */; };
@@ -45,6 +46,7 @@
 		9426F0752AF38E070036B3AC /* UIWindowExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowExtensions.swift; sourceTree = "<group>"; };
 		9426F0772AF3901D0036B3AC /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
 		9471292E2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewExtensionsTests.swift; sourceTree = "<group>"; };
+		947129332AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtensionsTests.swift; sourceTree = "<group>"; };
 		94DDD2082AF32CFB00077AA6 /* SBExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SBExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DDD2102AF32CFB00077AA6 /* SBExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SBExtensionsTests.swift; path = Tests/SBExtensionsTests.swift; sourceTree = "<group>"; };
@@ -83,6 +85,15 @@
 			path = Tests/WebKit;
 			sourceTree = "<group>";
 		};
+		947129322AFCA3FC00FEB8A4 /* Dispatch */ = {
+			isa = PBXGroup;
+			children = (
+				947129332AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift */,
+			);
+			name = Dispatch;
+			path = Tests/Dispatch;
+			sourceTree = "<group>";
+		};
 		94DDD1FE2AF32CFB00077AA6 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				94DDD2262AF32D4800077AA6 /* SBExtensionsTests.swift */,
+				947129322AFCA3FC00FEB8A4 /* Dispatch */,
 				9471292D2AFC8EE300FEB8A4 /* WebKit */,
 			);
 			name = Tests;
@@ -285,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94DDD2272AF32D4800077AA6 /* SBExtensionsTests.swift in Sources */,
+				947129342AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift in Sources */,
 				9471292F2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
