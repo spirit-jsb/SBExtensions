@@ -11,7 +11,7 @@ import WebKit
 
 public extension WKWebView {
     @discardableResult
-    func loadFromURL(_ url: URL, cachePolicy: URLRequest.CachePolicy? = nil, timeoutInterval: TimeInterval? = nil) -> WKNavigation? {
+    func loadURL(_ url: URL, cachePolicy: URLRequest.CachePolicy? = nil, timeoutInterval: TimeInterval? = nil) -> WKNavigation? {
         var request = URLRequest(url: url)
         if let cachePolicy = cachePolicy {
             request.cachePolicy = cachePolicy
@@ -24,12 +24,12 @@ public extension WKWebView {
     }
 
     @discardableResult
-    func loadFromURLString(_ urlString: String, cachePolicy: URLRequest.CachePolicy? = nil, timeoutInterval: TimeInterval? = nil) -> WKNavigation? {
+    func loadURLString(_ urlString: String, cachePolicy: URLRequest.CachePolicy? = nil, timeoutInterval: TimeInterval? = nil) -> WKNavigation? {
         guard let url = URL(string: urlString) else {
             return nil
         }
 
-        return self.loadFromURL(url, cachePolicy: cachePolicy, timeoutInterval: timeoutInterval)
+        return self.loadURL(url, cachePolicy: cachePolicy, timeoutInterval: timeoutInterval)
     }
 }
 
