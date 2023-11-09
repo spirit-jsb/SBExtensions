@@ -22,43 +22,47 @@ final class WKWebViewExtensionsTests: XCTestCase {
     }
 
     func testLoadURL() {
-        let successExpectation = WebViewSuccessExpectation(description: "Test load correct URL", webView: self.webView)
+        let expectation = WebViewSuccessExpectation(description: "Test load correct URL", webView: self.webView)
 
         let url = URL(string: "https://www.apple.com")!
+
         let navigation = self.webView.loadURL(url)
 
         XCTAssertNotNil(navigation)
 
-        self.wait(for: [successExpectation], timeout: self.timeout)
+        self.wait(for: [expectation], timeout: self.timeout)
     }
 
     func testLoadURLString() {
-        let successExpectation = WebViewSuccessExpectation(description: "Test load correct URL string", webView: self.webView)
+        let expectation = WebViewSuccessExpectation(description: "Test load correct URL string", webView: self.webView)
 
         let urlString = "https://www.apple.com"
+
         let navigation = self.webView.loadURLString(urlString)
 
         XCTAssertNotNil(navigation)
 
-        self.wait(for: [successExpectation], timeout: self.timeout)
+        self.wait(for: [expectation], timeout: self.timeout)
     }
 
     func testLoadInvalidURLString() {
         let invalidURLString = "invalid URL"
+
         let navigation = self.webView.loadURLString(invalidURLString)
 
         XCTAssertNil(navigation)
     }
 
     func testLoadDeathURLString() {
-        let failureExpectation = WebViewFailureExpectation(description: "Test load death URL string", webView: self.webView)
+        let expectation = WebViewFailureExpectation(description: "Test load death URL string", webView: self.webView)
 
         let deathURLString = "https://dead-url-573489574389.com"
+
         let navigation = self.webView.loadURLString(deathURLString, timeoutInterval: 5.0)
 
         XCTAssertNotNil(navigation)
 
-        self.wait(for: [failureExpectation], timeout: self.timeout)
+        self.wait(for: [expectation], timeout: self.timeout)
     }
 }
 
