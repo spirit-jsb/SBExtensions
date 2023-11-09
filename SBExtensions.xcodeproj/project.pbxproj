@@ -18,6 +18,7 @@
 		9471292F2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471292E2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift */; };
 		947129342AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947129332AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift */; };
 		947129372AFCB00800FEB8A4 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947129362AFCB00800FEB8A4 /* UIAlertControllerExtensions.swift */; };
+		947129392AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947129382AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift */; };
 		94DDD2112AF32CFB00077AA6 /* SBExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94DDD2082AF32CFB00077AA6 /* SBExtensions.framework */; };
 		94DDD22B2AF3340400077AA6 /* WKWebViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD22A2AF3340400077AA6 /* WKWebViewExtensions.swift */; };
 		94DDD22E2AF3368400077AA6 /* DispatchQueueExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD22D2AF3368400077AA6 /* DispatchQueueExtensions.swift */; };
@@ -48,6 +49,7 @@
 		9471292E2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewExtensionsTests.swift; sourceTree = "<group>"; };
 		947129332AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtensionsTests.swift; sourceTree = "<group>"; };
 		947129362AFCB00800FEB8A4 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
+		947129382AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensionsTests.swift; sourceTree = "<group>"; };
 		94DDD2082AF32CFB00077AA6 /* SBExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SBExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DDD2102AF32CFB00077AA6 /* SBExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DDD22A2AF3340400077AA6 /* WKWebViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewExtensions.swift; sourceTree = "<group>"; };
@@ -94,6 +96,15 @@
 			path = Tests/Dispatch;
 			sourceTree = "<group>";
 		};
+		947129352AFCA9EC00FEB8A4 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				947129382AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift */,
+			);
+			name = UIKit;
+			path = Tests/UIKit;
+			sourceTree = "<group>";
+		};
 		94DDD1FE2AF32CFB00077AA6 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				947129322AFCA3FC00FEB8A4 /* Dispatch */,
+				947129352AFCA9EC00FEB8A4 /* UIKit */,
 				9471292D2AFC8EE300FEB8A4 /* WebKit */,
 			);
 			name = Tests;
@@ -298,6 +310,7 @@
 			files = (
 				947129342AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift in Sources */,
 				947129372AFCB00800FEB8A4 /* UIAlertControllerExtensions.swift in Sources */,
+				947129392AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift in Sources */,
 				9471292F2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
