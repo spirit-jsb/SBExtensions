@@ -36,16 +36,16 @@ public extension UITableView {
         self.register(cellType, forCellReuseIdentifier: cellType.identifier)
     }
 
-    func registerCellWithNib<T: UITableViewCell & NibLoadable>(_ cellType: T.Type) {
-        self.register(cellType.nib, forCellReuseIdentifier: cellType.identifier)
+    func registerCell<T: UITableViewCell & NibLoadable>(_ nibType: T.Type) {
+        self.register(nibType.nib, forCellReuseIdentifier: nibType.identifier)
     }
 
     func registerHeaderFooterView<T: UIView>(_ viewType: T.Type) {
         self.register(viewType, forHeaderFooterViewReuseIdentifier: viewType.identifier)
     }
 
-    func registerHeaderFooterViewWithNib<T: UIView & NibLoadable>(_ viewType: T.Type) {
-        self.register(viewType.nib, forHeaderFooterViewReuseIdentifier: viewType.identifier)
+    func registerHeaderFooterView<T: UIView & NibLoadable>(_ nibType: T.Type) {
+        self.register(nibType.nib, forHeaderFooterViewReuseIdentifier: nibType.identifier)
     }
 
     func dequeueReusableCell<T: UITableViewCell>(_ cellType: T.Type) -> T {
