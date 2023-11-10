@@ -30,16 +30,16 @@ public extension UICollectionView {
         self.register(cellType, forCellWithReuseIdentifier: cellType.identifier)
     }
 
-    func registerCellWithNib<T: UICollectionViewCell & NibLoadable>(_ cellType: T.Type) {
-        self.register(cellType.nib, forCellWithReuseIdentifier: cellType.identifier)
+    func registerCell<T: UICollectionViewCell & NibLoadable>(_ nibType: T.Type) {
+        self.register(nibType.nib, forCellWithReuseIdentifier: nibType.identifier)
     }
 
-    func registerSupplementaryView<T: UICollectionReusableView>(_ viewType: T.Type, forSupplementaryViewKind kind: SupplementaryViewKind) {
-        self.register(viewType, forSupplementaryViewOfKind: kind.rawValue, withReuseIdentifier: viewType.identifier)
+    func registerSupplementaryView<T: UICollectionReusableView>(_ viewType: T.Type, supplementaryViewKind: SupplementaryViewKind) {
+        self.register(viewType, forSupplementaryViewOfKind: supplementaryViewKind.rawValue, withReuseIdentifier: viewType.identifier)
     }
 
-    func registerSupplementaryViewWithNib<T: UICollectionReusableView & NibLoadable>(_ viewType: T.Type, forSupplementaryViewKind kind: SupplementaryViewKind) {
-        self.register(viewType.nib, forSupplementaryViewOfKind: kind.rawValue, withReuseIdentifier: viewType.identifier)
+    func registerSupplementaryView<T: UICollectionReusableView & NibLoadable>(_ nibType: T.Type, supplementaryViewKind: SupplementaryViewKind) {
+        self.register(nibType.nib, forSupplementaryViewOfKind: supplementaryViewKind.rawValue, withReuseIdentifier: nibType.identifier)
     }
 
     func dequeueReusableCell<T: UICollectionViewCell>(_ cellType: T.Type, at indexPath: IndexPath) -> T {
