@@ -17,10 +17,11 @@
 		9426F0782AF3901D0036B3AC /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0772AF3901D0036B3AC /* UIScrollViewExtensions.swift */; };
 		9471292F2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471292E2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift */; };
 		947129342AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947129332AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift */; };
-		947129372AFCB00800FEB8A4 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947129362AFCB00800FEB8A4 /* UIAlertControllerExtensions.swift */; };
 		947129392AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947129382AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift */; };
-		9471293B2AFCB6D600FEB8A4 /* UIBezierPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471293A2AFCB6D600FEB8A4 /* UIBezierPathExtensions.swift */; };
 		9471293D2AFCBA1700FEB8A4 /* UIBezierPathExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471293C2AFCBA1700FEB8A4 /* UIBezierPathExtensionsTests.swift */; };
+		947129402AFCC83F00FEB8A4 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471293E2AFCC83B00FEB8A4 /* UIButtonExtensions.swift */; };
+		947129412AFCC84300FEB8A4 /* UIBezierPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471293A2AFCB6D600FEB8A4 /* UIBezierPathExtensions.swift */; };
+		9471294E2AFCC84F00FEB8A4 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947129362AFCB00800FEB8A4 /* UIAlertControllerExtensions.swift */; };
 		94DDD2112AF32CFB00077AA6 /* SBExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94DDD2082AF32CFB00077AA6 /* SBExtensions.framework */; };
 		94DDD22B2AF3340400077AA6 /* WKWebViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD22A2AF3340400077AA6 /* WKWebViewExtensions.swift */; };
 		94DDD22E2AF3368400077AA6 /* DispatchQueueExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DDD22D2AF3368400077AA6 /* DispatchQueueExtensions.swift */; };
@@ -54,6 +55,7 @@
 		947129382AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensionsTests.swift; sourceTree = "<group>"; };
 		9471293A2AFCB6D600FEB8A4 /* UIBezierPathExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPathExtensions.swift; sourceTree = "<group>"; };
 		9471293C2AFCBA1700FEB8A4 /* UIBezierPathExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPathExtensionsTests.swift; sourceTree = "<group>"; };
+		9471293E2AFCC83B00FEB8A4 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		94DDD2082AF32CFB00077AA6 /* SBExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SBExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DDD2102AF32CFB00077AA6 /* SBExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DDD22A2AF3340400077AA6 /* WKWebViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewExtensions.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				947129362AFCB00800FEB8A4 /* UIAlertControllerExtensions.swift */,
 				9426F0672AF364220036B3AC /* UIApplicationExtensions.swift */,
 				9471293A2AFCB6D600FEB8A4 /* UIBezierPathExtensions.swift */,
+				9471293E2AFCC83B00FEB8A4 /* UIButtonExtensions.swift */,
 				94DDD2362AF33AD800077AA6 /* UICollectionViewExtensions.swift */,
 				9426F0732AF389C10036B3AC /* UIColorExtensions.swift */,
 				9426F0692AF382CE0036B3AC /* UIFontExtensions.swift */,
@@ -296,6 +299,7 @@
 			files = (
 				9426F0682AF364220036B3AC /* UIApplicationExtensions.swift in Sources */,
 				94DDD2372AF33AD800077AA6 /* UICollectionViewExtensions.swift in Sources */,
+				9471294E2AFCC84F00FEB8A4 /* UIAlertControllerExtensions.swift in Sources */,
 				9426F06A2AF382CE0036B3AC /* UIFontExtensions.swift in Sources */,
 				9426F06C2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift in Sources */,
 				94DDD2312AF3389E00077AA6 /* UITableViewExtensions.swift in Sources */,
@@ -305,8 +309,10 @@
 				9426F0742AF389C10036B3AC /* UIColorExtensions.swift in Sources */,
 				94DDD2332AF338E400077AA6 /* NibLoadable.swift in Sources */,
 				94DDD22B2AF3340400077AA6 /* WKWebViewExtensions.swift in Sources */,
+				947129412AFCC84300FEB8A4 /* UIBezierPathExtensions.swift in Sources */,
 				94DDD22E2AF3368400077AA6 /* DispatchQueueExtensions.swift in Sources */,
 				9426F06E2AF383EA0036B3AC /* UIScreenExtensions.swift in Sources */,
+				947129402AFCC83F00FEB8A4 /* UIButtonExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,8 +322,6 @@
 			files = (
 				947129342AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift in Sources */,
 				9471293D2AFCBA1700FEB8A4 /* UIBezierPathExtensionsTests.swift in Sources */,
-				9471293B2AFCB6D600FEB8A4 /* UIBezierPathExtensions.swift in Sources */,
-				947129372AFCB00800FEB8A4 /* UIAlertControllerExtensions.swift in Sources */,
 				947129392AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift in Sources */,
 				9471292F2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift in Sources */,
 			);
