@@ -26,6 +26,28 @@ public extension UICollectionView {
 }
 
 public extension UICollectionView {
+    var lastItemIndexPath: IndexPath? {
+        return self.indexPathOfLastItem(inSection: self.lastSection)
+    }
+
+    var lastSection: Int {
+        return self.numberOfSections > 0 ? self.numberOfSections - 1 : 0
+    }
+
+    var numberOfItems: Int {
+        var section = 0
+        var itemsCount = 0
+
+        while section < self.numberOfSections {
+            itemsCount += self.numberOfItems(inSection: section)
+            section += 1
+        }
+
+        return itemsCount
+    }
+}
+
+public extension UICollectionView {
     func registerCell<T: UICollectionViewCell>(_ cellType: T.Type) {
         self.register(cellType, forCellWithReuseIdentifier: cellType.identifier)
     }
@@ -54,6 +76,24 @@ public extension UICollectionView {
             fatalError("Could not dequeue a view of kind: \(supplementaryViewKind.rawValue) with identifier \(viewType.identifier) - must register a nib or a class for the identifier or connect a prototype cell in a storyboard")
         }
         return supplementaryView
+    }
+
+    func indexPathOfLastItem(inSection section: Int) -> IndexPath? {
+        guard section >= 0, section < self.numberOfSections else {
+            return nil
+        }
+
+        let itemsCount = self.numberOfItems(inSection: section)
+
+        return IndexPath(item: itemsCount > 0 ? itemsCount - 1 : 0, section: section)
+    }
+
+    func safeScrollToItem(at indexPath: IndexPath, at scrollPosition: UICollectionView.ScrollPosition, animated: Bool) {
+        guard indexPath.section >= 0, indexPath.section < self.numberOfSections, indexPath.item >= 0, indexPath.item < self.numberOfItems(inSection: indexPath.section) else {
+            return
+        }
+
+        self.scrollToItem(at: indexPath, at: scrollPosition, animated: animated)
     }
 }
 
