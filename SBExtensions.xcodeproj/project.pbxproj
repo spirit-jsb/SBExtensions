@@ -23,6 +23,7 @@
 		940C92DB2B020A46003003C1 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92DA2B020A46003003C1 /* DateExtensions.swift */; };
 		940C92DD2B0219B1003003C1 /* LocaleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92DC2B0219B1003003C1 /* LocaleExtensions.swift */; };
 		940C92DF2B021A10003003C1 /* NotificationCenterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92DE2B021A10003003C1 /* NotificationCenterExtensions.swift */; };
+		940C92E12B021B32003003C1 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92E02B021B32003003C1 /* NSAttributedStringExtensions.swift */; };
 		9426F0682AF364220036B3AC /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0672AF364220036B3AC /* UIApplicationExtensions.swift */; };
 		9426F06A2AF382CE0036B3AC /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0692AF382CE0036B3AC /* UIFontExtensions.swift */; };
 		9426F06C2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F06B2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift */; };
@@ -76,6 +77,7 @@
 		940C92DA2B020A46003003C1 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		940C92DC2B0219B1003003C1 /* LocaleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleExtensions.swift; sourceTree = "<group>"; };
 		940C92DE2B021A10003003C1 /* NotificationCenterExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtensions.swift; sourceTree = "<group>"; };
+		940C92E02B021B32003003C1 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 		9426F0672AF364220036B3AC /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		9426F0692AF382CE0036B3AC /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		9426F06B2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerExtensions.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				940C92DA2B020A46003003C1 /* DateExtensions.swift */,
 				940C92DC2B0219B1003003C1 /* LocaleExtensions.swift */,
 				940C92DE2B021A10003003C1 /* NotificationCenterExtensions.swift */,
+				940C92E02B021B32003003C1 /* NSAttributedStringExtensions.swift */,
 				940C92D12B020458003003C1 /* URLExtensions.swift */,
 				940C92D62B0208BC003003C1 /* URLRequestExtensions.swift */,
 			);
@@ -399,6 +402,7 @@
 				940C92D22B020458003003C1 /* URLExtensions.swift in Sources */,
 				9471294E2AFCC84F00FEB8A4 /* UIAlertControllerExtensions.swift in Sources */,
 				9426F06A2AF382CE0036B3AC /* UIFontExtensions.swift in Sources */,
+				940C92E12B021B32003003C1 /* NSAttributedStringExtensions.swift in Sources */,
 				940C92DB2B020A46003003C1 /* DateExtensions.swift in Sources */,
 				940C92CC2B01C281003003C1 /* CLLocationCoordinate2DExtensions.swift in Sources */,
 				9426F06C2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift in Sources */,
