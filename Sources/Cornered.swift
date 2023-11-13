@@ -5,10 +5,15 @@
 //  Created by JONO-Jsb on 2023/11/13.
 //
 
-#if canImport(QuartzCore) && canImport(UIKit)
+#if canImport(QuartzCore)
 
 import QuartzCore
+
+#if canImport(UIKit)
+
 import UIKit
+
+#endif
 
 public struct Corner: OptionSet {
     public static let allCorners = Corner(rawValue: ~0)
@@ -40,6 +45,8 @@ public struct Corner: OptionSet {
         return maskedCorners
     }
 
+    #if canImport(UIKit)
+
     var roundingCorners: UIRectCorner {
         var roundingCorners = UIRectCorner()
 
@@ -62,6 +69,8 @@ public struct Corner: OptionSet {
 
         return roundingCorners
     }
+
+    #endif
 
     public var rawValue: UInt
 

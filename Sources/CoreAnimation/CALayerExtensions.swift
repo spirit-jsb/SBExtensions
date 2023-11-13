@@ -5,10 +5,15 @@
 //  Created by JONO-Jsb on 2023/11/13.
 //
 
-#if canImport(QuartzCore) && canImport(UIKit)
+#if canImport(QuartzCore)
 
 import QuartzCore
+
+#if canImport(UIKit)
+
 import UIKit
+
+#endif
 
 public extension CALayer {
     var left: CGFloat {
@@ -111,6 +116,8 @@ public extension CALayer {
         }
     }
 
+    #if canImport(UIKit)
+
     var corners: Corner {
         var corners = Corner()
 
@@ -129,6 +136,8 @@ public extension CALayer {
 
         return corners
     }
+
+    #endif
 }
 
 public extension CALayer {
@@ -152,6 +161,8 @@ public extension CALayer {
             sublayer.removeFromSuperlayer()
         }
     }
+
+    #if canImport(UIKit)
 
     func addRoundCorners(_ corners: Corner, radius: CGFloat, clips: Bool = false) {
         CALayer.performWithoutAnimation {
@@ -199,6 +210,8 @@ public extension CALayer {
             self.shadowPath = UIBezierPath(roundedRect: roundedRect, byRoundingCorners: roundingCorners, cornerRadii: cornerRadii).cgPath
         }
     }
+
+    #endif
 
     func sublayer(withName name: String?) -> CALayer? {
         return self.sublayer { $0.name == name }
