@@ -9,29 +9,13 @@
 
 import CoreGraphics
 
-#if canImport(Foundation)
+#if canImport(UIKit)
 
-import Foundation
+import UIKit
 
 #endif
 
 public extension CGFloat {
-    var abs: CGFloat {
-        return Swift.abs(self)
-    }
-
-    #if canImport(Foundation)
-
-    var ceil: CGFloat {
-        return Foundation.ceil(self)
-    }
-
-    var floor: CGFloat {
-        return Foundation.floor(self)
-    }
-
-    #endif
-
     var int: Int {
         return Int(self)
     }
@@ -51,6 +35,17 @@ public extension CGFloat {
     var radiansToDegrees: CGFloat {
         return self * 180.0 / CGFloat.pi
     }
+
+    #if canImport(UIKit)
+
+    var flatPoints: CGFloat {
+        let value = self == CGFLOAT_MIN ? 0.0 : self
+        let scale = UIScreen.current.scale
+
+        return ceil(value * scale) / scale
+    }
+
+    #endif
 }
 
 #endif
