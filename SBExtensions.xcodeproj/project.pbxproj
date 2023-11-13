@@ -15,6 +15,7 @@
 		940C92C72B01B1F4003003C1 /* CGSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92C62B01B1F4003003C1 /* CGSizeExtensions.swift */; };
 		940C92C92B01B66A003003C1 /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92C82B01B66A003003C1 /* CGRectExtensions.swift */; };
 		940C92CC2B01C281003003C1 /* CLLocationCoordinate2DExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92CB2B01C281003003C1 /* CLLocationCoordinate2DExtensions.swift */; };
+		940C92CE2B01FA18003003C1 /* CLLocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92CD2B01FA18003003C1 /* CLLocationExtensions.swift */; };
 		9426F0682AF364220036B3AC /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0672AF364220036B3AC /* UIApplicationExtensions.swift */; };
 		9426F06A2AF382CE0036B3AC /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0692AF382CE0036B3AC /* UIFontExtensions.swift */; };
 		9426F06C2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F06B2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift */; };
@@ -60,6 +61,7 @@
 		940C92C62B01B1F4003003C1 /* CGSizeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtensions.swift; sourceTree = "<group>"; };
 		940C92C82B01B66A003003C1 /* CGRectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensions.swift; sourceTree = "<group>"; };
 		940C92CB2B01C281003003C1 /* CLLocationCoordinate2DExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtensions.swift; sourceTree = "<group>"; };
+		940C92CD2B01FA18003003C1 /* CLLocationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtensions.swift; sourceTree = "<group>"; };
 		9426F0672AF364220036B3AC /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		9426F0692AF382CE0036B3AC /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		9426F06B2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerExtensions.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				940C92CB2B01C281003003C1 /* CLLocationCoordinate2DExtensions.swift */,
+				940C92CD2B01FA18003003C1 /* CLLocationExtensions.swift */,
 			);
 			path = CoreLocation;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				940C92C72B01B1F4003003C1 /* CGSizeExtensions.swift in Sources */,
 				940C92C32B01ABB7003003C1 /* CGFloatExtensions.swift in Sources */,
 				947129402AFCC83F00FEB8A4 /* UIButtonExtensions.swift in Sources */,
+				940C92CE2B01FA18003003C1 /* CLLocationExtensions.swift in Sources */,
 				940C92C52B01AFB4003003C1 /* CGPointExtensions.swift in Sources */,
 				940C92C12B01A8BE003003C1 /* CGColorExtensions.swift in Sources */,
 			);
