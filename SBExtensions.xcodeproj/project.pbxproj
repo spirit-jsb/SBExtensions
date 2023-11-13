@@ -12,6 +12,7 @@
 		940C92C12B01A8BE003003C1 /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92C02B01A8BE003003C1 /* CGColorExtensions.swift */; };
 		940C92C32B01ABB7003003C1 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92C22B01ABB7003003C1 /* CGFloatExtensions.swift */; };
 		940C92C52B01AFB4003003C1 /* CGPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92C42B01AFB4003003C1 /* CGPointExtensions.swift */; };
+		940C92C72B01B1F4003003C1 /* CGSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92C62B01B1F4003003C1 /* CGSizeExtensions.swift */; };
 		9426F0682AF364220036B3AC /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0672AF364220036B3AC /* UIApplicationExtensions.swift */; };
 		9426F06A2AF382CE0036B3AC /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0692AF382CE0036B3AC /* UIFontExtensions.swift */; };
 		9426F06C2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F06B2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift */; };
@@ -54,6 +55,7 @@
 		940C92C02B01A8BE003003C1 /* CGColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGColorExtensions.swift; sourceTree = "<group>"; };
 		940C92C22B01ABB7003003C1 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
 		940C92C42B01AFB4003003C1 /* CGPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtensions.swift; sourceTree = "<group>"; };
+		940C92C62B01B1F4003003C1 /* CGSizeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtensions.swift; sourceTree = "<group>"; };
 		9426F0672AF364220036B3AC /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		9426F0692AF382CE0036B3AC /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		9426F06B2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerExtensions.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				940C92C02B01A8BE003003C1 /* CGColorExtensions.swift */,
 				940C92C22B01ABB7003003C1 /* CGFloatExtensions.swift */,
 				940C92C42B01AFB4003003C1 /* CGPointExtensions.swift */,
+				940C92C62B01B1F4003003C1 /* CGSizeExtensions.swift */,
 			);
 			path = CoreGraphics;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				949850772AFE242700C0DB04 /* UISwitchExtensions.swift in Sources */,
 				949850752AFE231600C0DB04 /* UIImageViewExtensions.swift in Sources */,
 				940C92BE2B01A25B003003C1 /* Cornered.swift in Sources */,
+				940C92C72B01B1F4003003C1 /* CGSizeExtensions.swift in Sources */,
 				940C92C32B01ABB7003003C1 /* CGFloatExtensions.swift in Sources */,
 				947129402AFCC83F00FEB8A4 /* UIButtonExtensions.swift in Sources */,
 				940C92C52B01AFB4003003C1 /* CGPointExtensions.swift in Sources */,
