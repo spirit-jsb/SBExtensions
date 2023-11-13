@@ -18,6 +18,7 @@
 		940C92CE2B01FA18003003C1 /* CLLocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92CD2B01FA18003003C1 /* CLLocationExtensions.swift */; };
 		940C92D22B020458003003C1 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92D12B020458003003C1 /* URLExtensions.swift */; };
 		940C92D52B02069C003003C1 /* URLEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92D42B02069C003003C1 /* URLEncoding.swift */; };
+		940C92D72B0208BC003003C1 /* URLRequestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92D62B0208BC003003C1 /* URLRequestExtensions.swift */; };
 		9426F0682AF364220036B3AC /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0672AF364220036B3AC /* UIApplicationExtensions.swift */; };
 		9426F06A2AF382CE0036B3AC /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0692AF382CE0036B3AC /* UIFontExtensions.swift */; };
 		9426F06C2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F06B2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift */; };
@@ -66,6 +67,7 @@
 		940C92CD2B01FA18003003C1 /* CLLocationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtensions.swift; sourceTree = "<group>"; };
 		940C92D12B020458003003C1 /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		940C92D42B02069C003003C1 /* URLEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoding.swift; sourceTree = "<group>"; };
+		940C92D62B0208BC003003C1 /* URLRequestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtensions.swift; sourceTree = "<group>"; };
 		9426F0672AF364220036B3AC /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		9426F0692AF382CE0036B3AC /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		9426F06B2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerExtensions.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				940C92D12B020458003003C1 /* URLExtensions.swift */,
+				940C92D62B0208BC003003C1 /* URLRequestExtensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				94DDD22B2AF3340400077AA6 /* WKWebViewExtensions.swift in Sources */,
 				947129412AFCC84300FEB8A4 /* UIBezierPathExtensions.swift in Sources */,
 				94DDD22E2AF3368400077AA6 /* DispatchQueueExtensions.swift in Sources */,
+				940C92D72B0208BC003003C1 /* URLRequestExtensions.swift in Sources */,
 				9426F06E2AF383EA0036B3AC /* UIScreenExtensions.swift in Sources */,
 				949850772AFE242700C0DB04 /* UISwitchExtensions.swift in Sources */,
 				949850752AFE231600C0DB04 /* UIImageViewExtensions.swift in Sources */,
