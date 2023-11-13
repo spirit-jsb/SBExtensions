@@ -9,10 +9,24 @@
 
 import CoreGraphics
 
+#if canImport(UIKit)
+
+import UIKit
+
+#endif
+
 public extension CGRect {
     var center: CGPoint {
         return CGPoint(x: self.midX, y: self.midY)
     }
+
+    #if canImport(UIKit)
+
+    var flatPoints: CGRect {
+        return CGRect(origin: self.origin.flatPoints, size: self.size.flatPoints)
+    }
+
+    #endif
 }
 
 public extension CGRect {
