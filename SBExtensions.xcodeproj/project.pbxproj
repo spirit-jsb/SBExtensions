@@ -16,6 +16,8 @@
 		940C92C92B01B66A003003C1 /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92C82B01B66A003003C1 /* CGRectExtensions.swift */; };
 		940C92CC2B01C281003003C1 /* CLLocationCoordinate2DExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92CB2B01C281003003C1 /* CLLocationCoordinate2DExtensions.swift */; };
 		940C92CE2B01FA18003003C1 /* CLLocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92CD2B01FA18003003C1 /* CLLocationExtensions.swift */; };
+		940C92D22B020458003003C1 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92D12B020458003003C1 /* URLExtensions.swift */; };
+		940C92D52B02069C003003C1 /* URLEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92D42B02069C003003C1 /* URLEncoding.swift */; };
 		9426F0682AF364220036B3AC /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0672AF364220036B3AC /* UIApplicationExtensions.swift */; };
 		9426F06A2AF382CE0036B3AC /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F0692AF382CE0036B3AC /* UIFontExtensions.swift */; };
 		9426F06C2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426F06B2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift */; };
@@ -62,6 +64,8 @@
 		940C92C82B01B66A003003C1 /* CGRectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensions.swift; sourceTree = "<group>"; };
 		940C92CB2B01C281003003C1 /* CLLocationCoordinate2DExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtensions.swift; sourceTree = "<group>"; };
 		940C92CD2B01FA18003003C1 /* CLLocationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtensions.swift; sourceTree = "<group>"; };
+		940C92D12B020458003003C1 /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
+		940C92D42B02069C003003C1 /* URLEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoding.swift; sourceTree = "<group>"; };
 		9426F0672AF364220036B3AC /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		9426F0692AF382CE0036B3AC /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		9426F06B2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerExtensions.swift; sourceTree = "<group>"; };
@@ -129,6 +133,22 @@
 			path = CoreLocation;
 			sourceTree = "<group>";
 		};
+		940C92CF2B020417003003C1 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				940C92D12B020458003003C1 /* URLExtensions.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		940C92D32B02068E003003C1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				940C92D42B02069C003003C1 /* URLEncoding.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		9471292D2AFC8EE300FEB8A4 /* WebKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,8 +213,10 @@
 				940C92BF2B01A8A6003003C1 /* CoreGraphics */,
 				940C92CA2B01C24E003003C1 /* CoreLocation */,
 				94DDD22C2AF3366D00077AA6 /* Dispatch */,
+				940C92CF2B020417003003C1 /* Foundation */,
 				94DDD22F2AF3388900077AA6 /* UIKit */,
 				94DDD2282AF333F200077AA6 /* WebKit */,
+				940C92D32B02068E003003C1 /* Utils */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -359,6 +381,7 @@
 			files = (
 				9426F0682AF364220036B3AC /* UIApplicationExtensions.swift in Sources */,
 				94DDD2372AF33AD800077AA6 /* UICollectionViewExtensions.swift in Sources */,
+				940C92D22B020458003003C1 /* URLExtensions.swift in Sources */,
 				9471294E2AFCC84F00FEB8A4 /* UIAlertControllerExtensions.swift in Sources */,
 				9426F06A2AF382CE0036B3AC /* UIFontExtensions.swift in Sources */,
 				940C92CC2B01C281003003C1 /* CLLocationCoordinate2DExtensions.swift in Sources */,
@@ -382,6 +405,7 @@
 				940C92C72B01B1F4003003C1 /* CGSizeExtensions.swift in Sources */,
 				940C92C32B01ABB7003003C1 /* CGFloatExtensions.swift in Sources */,
 				947129402AFCC83F00FEB8A4 /* UIButtonExtensions.swift in Sources */,
+				940C92D52B02069C003003C1 /* URLEncoding.swift in Sources */,
 				940C92CE2B01FA18003003C1 /* CLLocationExtensions.swift in Sources */,
 				940C92C52B01AFB4003003C1 /* CGPointExtensions.swift in Sources */,
 				940C92C12B01A8BE003003C1 /* CGColorExtensions.swift in Sources */,
