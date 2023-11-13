@@ -9,21 +9,17 @@
 
 import CoreGraphics
 
-#if canImport(Foundation)
+#if canImport(UIKit)
 
-import Foundation
+import UIKit
 
 #endif
 
 public extension CGPoint {
-    #if canImport(Foundation)
+    #if canImport(UIKit)
 
-    var ceil: CGPoint {
-        return CGPoint(x: Foundation.ceil(self.x), y: Foundation.ceil(self.y))
-    }
-
-    var floor: CGPoint {
-        return CGPoint(x: Foundation.floor(self.x), y: Foundation.floor(self.y))
+    var flatPoints: CGPoint {
+        return CGPoint(x: self.x.flatPoints, y: self.y.flatPoints)
     }
 
     #endif
