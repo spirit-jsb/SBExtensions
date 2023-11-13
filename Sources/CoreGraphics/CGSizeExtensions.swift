@@ -9,9 +9,9 @@
 
 import CoreGraphics
 
-#if canImport(Foundation)
+#if canImport(UIKit)
 
-import Foundation
+import UIKit
 
 #endif
 
@@ -32,14 +32,10 @@ public extension CGSize {
         return max(self.width, self.height)
     }
 
-    #if canImport(Foundation)
+    #if canImport(UIKit)
 
-    var ceil: CGSize {
-        return CGSize(width: Foundation.ceil(self.width), height: Foundation.ceil(self.height))
-    }
-
-    var floor: CGSize {
-        return CGSize(width: Foundation.floor(self.width), height: Foundation.floor(self.height))
+    var flatPoints: CGSize {
+        return CGSize(width: self.width.flatPoints, height: self.height.flatPoints)
     }
 
     #endif
