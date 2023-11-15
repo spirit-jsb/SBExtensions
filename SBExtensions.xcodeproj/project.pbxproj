@@ -43,6 +43,7 @@
 		9491C4F32B04A270008811E5 /* NSPredicateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C4F22B04A270008811E5 /* NSPredicateExtensions.swift */; };
 		9491C4F52B04A43D008811E5 /* NSRegularExpressionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C4F42B04A43D008811E5 /* NSRegularExpressionExtensions.swift */; };
 		9491C4F72B04A824008811E5 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C4F62B04A824008811E5 /* UserDefaultsExtensions.swift */; };
+		9491C4FA2B04AC12008811E5 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C4F92B04AC12008811E5 /* UIViewExtensions.swift */; };
 		949850752AFE231600C0DB04 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949850742AFE231600C0DB04 /* UIImageViewExtensions.swift */; };
 		949850772AFE242700C0DB04 /* UISwitchExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949850762AFE242700C0DB04 /* UISwitchExtensions.swift */; };
 		9498507A2AFE255B00C0DB04 /* CAGradientLayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949850792AFE255B00C0DB04 /* CAGradientLayerExtensions.swift */; };
@@ -101,6 +102,7 @@
 		9491C4F22B04A270008811E5 /* NSPredicateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPredicateExtensions.swift; sourceTree = "<group>"; };
 		9491C4F42B04A43D008811E5 /* NSRegularExpressionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSRegularExpressionExtensions.swift; sourceTree = "<group>"; };
 		9491C4F62B04A824008811E5 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
+		9491C4F92B04AC12008811E5 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		949850742AFE231600C0DB04 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		949850762AFE242700C0DB04 /* UISwitchExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISwitchExtensions.swift; sourceTree = "<group>"; };
 		949850792AFE255B00C0DB04 /* CAGradientLayerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayerExtensions.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				9426F06F2AF3868E0036B3AC /* UIStackViewExtensions.swift */,
 				949850762AFE242700C0DB04 /* UISwitchExtensions.swift */,
 				94DDD2302AF3389E00077AA6 /* UITableViewExtensions.swift */,
+				9491C4F92B04AC12008811E5 /* UIViewExtensions.swift */,
 				9426F0752AF38E070036B3AC /* UIWindowExtensions.swift */,
 			);
 			path = UIKit;
@@ -413,6 +416,7 @@
 				94DDD2372AF33AD800077AA6 /* UICollectionViewExtensions.swift in Sources */,
 				940C92D22B020458003003C1 /* URLExtensions.swift in Sources */,
 				9471294E2AFCC84F00FEB8A4 /* UIAlertControllerExtensions.swift in Sources */,
+				9491C4FA2B04AC12008811E5 /* UIViewExtensions.swift in Sources */,
 				9426F06A2AF382CE0036B3AC /* UIFontExtensions.swift in Sources */,
 				940C92E12B021B32003003C1 /* NSAttributedStringExtensions.swift in Sources */,
 				940C92DB2B020A46003003C1 /* DateExtensions.swift in Sources */,
