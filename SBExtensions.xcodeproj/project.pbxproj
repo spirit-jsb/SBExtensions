@@ -55,6 +55,7 @@
 		9491C5112B060153008811E5 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C5102B060153008811E5 /* FloatExtensions.swift */; };
 		9491C5132B0601AB008811E5 /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C5122B0601AB008811E5 /* FloatingPointExtensions.swift */; };
 		9491C5152B06088F008811E5 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C5142B06088F008811E5 /* IntExtensions.swift */; };
+		9491C5192B060D69008811E5 /* CAGradientLayerExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C5182B060D69008811E5 /* CAGradientLayerExtensionsTests.swift */; };
 		949850752AFE231600C0DB04 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949850742AFE231600C0DB04 /* UIImageViewExtensions.swift */; };
 		949850772AFE242700C0DB04 /* UISwitchExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949850762AFE242700C0DB04 /* UISwitchExtensions.swift */; };
 		9498507A2AFE255B00C0DB04 /* CAGradientLayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949850792AFE255B00C0DB04 /* CAGradientLayerExtensions.swift */; };
@@ -125,6 +126,7 @@
 		9491C5102B060153008811E5 /* FloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensions.swift; sourceTree = "<group>"; };
 		9491C5122B0601AB008811E5 /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
 		9491C5142B06088F008811E5 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
+		9491C5182B060D69008811E5 /* CAGradientLayerExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayerExtensionsTests.swift; sourceTree = "<group>"; };
 		949850742AFE231600C0DB04 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		949850762AFE242700C0DB04 /* UISwitchExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISwitchExtensions.swift; sourceTree = "<group>"; };
 		949850792AFE255B00C0DB04 /* CAGradientLayerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayerExtensions.swift; sourceTree = "<group>"; };
@@ -247,6 +249,15 @@
 			path = SwiftStdlib;
 			sourceTree = "<group>";
 		};
+		9491C5172B060D49008811E5 /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				9491C5182B060D69008811E5 /* CAGradientLayerExtensionsTests.swift */,
+			);
+			name = CoreAnimation;
+			path = Tests/CoreAnimation;
+			sourceTree = "<group>";
+		};
 		949850782AFE254000C0DB04 /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +306,7 @@
 		94DDD2222AF32D3300077AA6 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				9491C5172B060D49008811E5 /* CoreAnimation */,
 				947129322AFCA3FC00FEB8A4 /* Dispatch */,
 				947129352AFCA9EC00FEB8A4 /* UIKit */,
 				9471292D2AFC8EE300FEB8A4 /* WebKit */,
@@ -516,6 +528,7 @@
 				9471293D2AFCBA1700FEB8A4 /* UIBezierPathExtensionsTests.swift in Sources */,
 				947129392AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift in Sources */,
 				9471292F2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift in Sources */,
+				9491C5192B060D69008811E5 /* CAGradientLayerExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
