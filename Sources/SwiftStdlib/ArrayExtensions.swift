@@ -5,6 +5,12 @@
 //  Created by JONO-Jsb on 2023/11/16.
 //
 
+#if canImport(Foundation)
+
+import Foundation
+
+#endif
+
 public extension Array {
     mutating func prepend(_ newElement: Element) {
         self.insert(newElement, at: 0)
@@ -92,6 +98,34 @@ public extension Array {
 
         return self
     }
+
+    #if canImport(Foundation)
+
+    func jsonData(prettify: Bool = true) -> Data? {
+        guard JSONSerialization.isValidJSONObject(self) else {
+            return nil
+        }
+
+        return try? JSONSerialization.data(withJSONObject: self, options: prettify ? .prettyPrinted : [])
+    }
+
+    #endif
+
+    #if canImport(Foundation)
+
+    func jsonString(prettify: Bool = true) -> String? {
+        guard JSONSerialization.isValidJSONObject(self) else {
+            return nil
+        }
+
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: self, options: prettify ? .prettyPrinted : []) else {
+            return nil
+        }
+
+        return String(data: jsonData, encoding: .utf8)
+    }
+
+    #endif
 }
 
 public extension Array {
