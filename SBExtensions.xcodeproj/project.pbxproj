@@ -56,6 +56,7 @@
 		9491C5132B0601AB008811E5 /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C5122B0601AB008811E5 /* FloatingPointExtensions.swift */; };
 		9491C5152B06088F008811E5 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C5142B06088F008811E5 /* IntExtensions.swift */; };
 		9491C5192B060D69008811E5 /* CAGradientLayerExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C5182B060D69008811E5 /* CAGradientLayerExtensionsTests.swift */; };
+		9491C51C2B060FCD008811E5 /* CGColorExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C51B2B060FCD008811E5 /* CGColorExtensionsTests.swift */; };
 		949850752AFE231600C0DB04 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949850742AFE231600C0DB04 /* UIImageViewExtensions.swift */; };
 		949850772AFE242700C0DB04 /* UISwitchExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949850762AFE242700C0DB04 /* UISwitchExtensions.swift */; };
 		9498507A2AFE255B00C0DB04 /* CAGradientLayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949850792AFE255B00C0DB04 /* CAGradientLayerExtensions.swift */; };
@@ -127,6 +128,7 @@
 		9491C5122B0601AB008811E5 /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
 		9491C5142B06088F008811E5 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
 		9491C5182B060D69008811E5 /* CAGradientLayerExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayerExtensionsTests.swift; sourceTree = "<group>"; };
+		9491C51B2B060FCD008811E5 /* CGColorExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGColorExtensionsTests.swift; sourceTree = "<group>"; };
 		949850742AFE231600C0DB04 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		949850762AFE242700C0DB04 /* UISwitchExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISwitchExtensions.swift; sourceTree = "<group>"; };
 		949850792AFE255B00C0DB04 /* CAGradientLayerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayerExtensions.swift; sourceTree = "<group>"; };
@@ -258,6 +260,15 @@
 			path = Tests/CoreAnimation;
 			sourceTree = "<group>";
 		};
+		9491C51A2B060FBB008811E5 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				9491C51B2B060FCD008811E5 /* CGColorExtensionsTests.swift */,
+			);
+			name = CoreGraphics;
+			path = Tests/CoreGraphics;
+			sourceTree = "<group>";
+		};
 		949850782AFE254000C0DB04 /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				9491C5172B060D49008811E5 /* CoreAnimation */,
+				9491C51A2B060FBB008811E5 /* CoreGraphics */,
 				947129322AFCA3FC00FEB8A4 /* Dispatch */,
 				947129352AFCA9EC00FEB8A4 /* UIKit */,
 				9471292D2AFC8EE300FEB8A4 /* WebKit */,
@@ -529,6 +541,7 @@
 				947129392AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift in Sources */,
 				9471292F2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift in Sources */,
 				9491C5192B060D69008811E5 /* CAGradientLayerExtensionsTests.swift in Sources */,
+				9491C51C2B060FCD008811E5 /* CGColorExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
