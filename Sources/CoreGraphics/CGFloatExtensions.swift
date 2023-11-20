@@ -39,8 +39,18 @@ public extension CGFloat {
     #if canImport(UIKit)
 
     var flatPoints: CGFloat {
+        return self.flatPointsWithScale()
+    }
+
+    #endif
+}
+
+extension CGFloat {
+    #if canImport(UIKit)
+
+    func flatPointsWithScale(_ scale: CGFloat = 0.0) -> CGFloat {
         let value = self == CGFLOAT_MIN ? 0.0 : self
-        let scale = UIScreen.current.scale
+        let scale = scale == 0.0 ? UIScreen.current.scale : scale
 
         return ceil(value * scale) / scale
     }
