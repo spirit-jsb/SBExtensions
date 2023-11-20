@@ -35,7 +35,7 @@ public extension CGSize {
     #if canImport(UIKit)
 
     var flatPoints: CGSize {
-        return CGSize(width: self.width.flatPoints, height: self.height.flatPoints)
+        return self.flatPointsWithScale()
     }
 
     #endif
@@ -108,6 +108,16 @@ public extension CGSize {
 
         return CGSize(width: width, height: height)
     }
+}
+
+extension CGSize {
+    #if canImport(UIKit)
+
+    func flatPointsWithScale(_ scale: CGFloat = 0.0) -> CGSize {
+        return CGSize(width: self.width.flatPointsWithScale(scale), height: self.height.flatPointsWithScale(scale))
+    }
+
+    #endif
 }
 
 #endif
