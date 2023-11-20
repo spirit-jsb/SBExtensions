@@ -39,11 +39,15 @@ final class CGFloatExtensionsTests: XCTestCase {
         XCTAssertEqual(CGFloat.pi.radiansToDegrees, CGFloat(180.0))
     }
 
+    #if canImport(UIKit)
+
     func testFlatPoints() {
         XCTAssertEqual(CGFloat(CGFLOAT_MIN).flatPoints, CGFloat(0.0))
         XCTAssertEqual(CGFloat(2.1).flatPointsWithScale(2), CGFloat(2.5))
         XCTAssertEqual(CGFloat(2.1).flatPointsWithScale(3), CGFloat(2.333), accuracy: 0.001)
     }
+
+    #endif
 }
 
 #endif
