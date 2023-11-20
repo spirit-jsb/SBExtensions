@@ -23,7 +23,7 @@ public extension CGRect {
     #if canImport(UIKit)
 
     var flatPoints: CGRect {
-        return CGRect(origin: self.origin.flatPoints, size: self.size.flatPoints)
+        return self.flatPointsWithScale()
     }
 
     #endif
@@ -45,6 +45,16 @@ public extension CGRect {
 
         self.init(origin: origin, size: size)
     }
+}
+
+extension CGRect {
+    #if canImport(UIKit)
+
+    func flatPointsWithScale(_ scale: CGFloat = 0.0) -> CGRect {
+        return CGRect(origin: self.origin.flatPointsWithScale(scale), size: self.size.flatPointsWithScale(scale))
+    }
+
+    #endif
 }
 
 #endif
