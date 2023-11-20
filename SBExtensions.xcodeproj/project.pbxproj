@@ -39,6 +39,7 @@
 		947129402AFCC83F00FEB8A4 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471293E2AFCC83B00FEB8A4 /* UIButtonExtensions.swift */; };
 		947129412AFCC84300FEB8A4 /* UIBezierPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471293A2AFCB6D600FEB8A4 /* UIBezierPathExtensions.swift */; };
 		9471294E2AFCC84F00FEB8A4 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947129362AFCB00800FEB8A4 /* UIAlertControllerExtensions.swift */; };
+		948869492B0B092500E4D7C4 /* CGSizeExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948869482B0B092500E4D7C4 /* CGSizeExtensionsTests.swift */; };
 		9491C4F12B0499EB008811E5 /* FileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C4F02B0499EB008811E5 /* FileManagerExtensions.swift */; };
 		9491C4F32B04A270008811E5 /* NSPredicateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C4F22B04A270008811E5 /* NSPredicateExtensions.swift */; };
 		9491C4F52B04A43D008811E5 /* NSRegularExpressionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491C4F42B04A43D008811E5 /* NSRegularExpressionExtensions.swift */; };
@@ -114,6 +115,7 @@
 		9471293A2AFCB6D600FEB8A4 /* UIBezierPathExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPathExtensions.swift; sourceTree = "<group>"; };
 		9471293C2AFCBA1700FEB8A4 /* UIBezierPathExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPathExtensionsTests.swift; sourceTree = "<group>"; };
 		9471293E2AFCC83B00FEB8A4 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		948869482B0B092500E4D7C4 /* CGSizeExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtensionsTests.swift; sourceTree = "<group>"; };
 		9491C4F02B0499EB008811E5 /* FileManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtensions.swift; sourceTree = "<group>"; };
 		9491C4F22B04A270008811E5 /* NSPredicateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPredicateExtensions.swift; sourceTree = "<group>"; };
 		9491C4F42B04A43D008811E5 /* NSRegularExpressionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSRegularExpressionExtensions.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				94E33CBD2B0AD43500AE684D /* CGFloatExtensionsTests.swift */,
 				94E33CBF2B0AF37C00AE684D /* CGPointExtensionsTests.swift */,
 				94E33CC12B0AFEC900AE684D /* CGRectExtensionsTests.swift */,
+				948869482B0B092500E4D7C4 /* CGSizeExtensionsTests.swift */,
 			);
 			name = CoreGraphics;
 			path = Tests/CoreGraphics;
@@ -547,6 +550,7 @@
 			files = (
 				947129342AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift in Sources */,
 				9471293D2AFCBA1700FEB8A4 /* UIBezierPathExtensionsTests.swift in Sources */,
+				948869492B0B092500E4D7C4 /* CGSizeExtensionsTests.swift in Sources */,
 				947129392AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift in Sources */,
 				9471292F2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift in Sources */,
 				9491C5192B060D69008811E5 /* CAGradientLayerExtensionsTests.swift in Sources */,
