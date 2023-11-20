@@ -26,7 +26,6 @@ final class CGPointExtensionsTests: XCTestCase {
 
     func testFlatPoints() {
         XCTAssertEqual(CGPoint(x: CGFloat(CGFLOAT_MIN), y: CGFloat(CGFLOAT_MIN)).flatPoints, CGPoint.zero)
-
         XCTAssertEqual(CGPoint(x: 2.1, y: 2.1).flatPointsWithScale(2).x, 2.5)
         XCTAssertEqual(CGPoint(x: 2.1, y: 2.1).flatPointsWithScale(2).y, 2.5)
         XCTAssertEqual(CGPoint(x: 2.1, y: 2.1).flatPointsWithScale(3).x, 2.333, accuracy: 0.001)
