@@ -19,7 +19,7 @@ public extension CGPoint {
     #if canImport(UIKit)
 
     var flatPoints: CGPoint {
-        return CGPoint(x: self.x.flatPoints, y: self.y.flatPoints)
+        return self.flatPointsWithScale()
     }
 
     #endif
@@ -64,6 +64,16 @@ public extension CGPoint {
     func distance(to point: CGPoint) -> CGFloat {
         return CGPoint.distance(from: self, to: point)
     }
+}
+
+extension CGPoint {
+    #if canImport(UIKit)
+
+    func flatPointsWithScale(_ scale: CGFloat = 0.0) -> CGPoint {
+        return CGPoint(x: self.x.flatPointsWithScale(scale), y: self.y.flatPointsWithScale(scale))
+    }
+
+    #endif
 }
 
 #endif
