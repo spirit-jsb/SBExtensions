@@ -46,11 +46,13 @@ final class WKWebViewExtensionsTests: XCTestCase {
     }
 
     func testLoadInvalidURLString() {
-        let invalidURLString = "invalid URL"
-
-        let navigation = self.webView.loadURLString(invalidURLString)
-
-        XCTAssertNil(navigation)
+        if #unavailable(iOS 17.0) {
+            let invalidURLString = "invalid URL"
+            
+            let navigation = self.webView.loadURLString(invalidURLString)
+            
+            XCTAssertNil(navigation)
+        }
     }
 
     func testLoadDeathURLString() {
