@@ -1,8 +1,9 @@
 //
 //  WKWebViewExtensionsTests.swift
-//  SBExtensionsTests
 //
-//  Created by JONO-Jsb on 2023/11/9.
+//  Created by Max on 2023/11/21
+//
+//  Copyright © 2023 Max. All rights reserved.
 //
 
 @testable import SBExtensions
@@ -48,9 +49,9 @@ final class WKWebViewExtensionsTests: XCTestCase {
     func testLoadInvalidURLString() {
         if #unavailable(iOS 17.0) {
             let invalidURLString = "invalid URL"
-            
+
             let navigation = self.webView.loadURLString(invalidURLString)
-            
+
             XCTAssertNil(navigation)
         }
     }

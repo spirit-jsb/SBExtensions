@@ -1,8 +1,9 @@
 //
 //  CGColorExtensionsTests.swift
-//  SBExtensionsTests
 //
-//  Created by JONO-Jsb on 2023/11/16.
+//  Created by Max on 2023/11/18
+//
+//  Copyright © 2023 Max. All rights reserved.
 //
 
 @testable import SBExtensions

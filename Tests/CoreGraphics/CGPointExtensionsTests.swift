@@ -1,8 +1,9 @@
 //
 //  CGPointExtensionsTests.swift
-//  SBExtensionsTests
 //
-//  Created by JONO-Jsb on 2023/11/20.
+//  Created by Max on 2023/11/21
+//
+//  Copyright © 2023 Max. All rights reserved.
 //
 
 @testable import SBExtensions

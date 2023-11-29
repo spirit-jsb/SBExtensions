@@ -1,8 +1,9 @@
 //
 //  Cornered.swift
-//  SBExtensions
 //
-//  Created by JONO-Jsb on 2023/11/13.
+//  Created by Max on 2023/11/18
+//
+//  Copyright © 2023 Max. All rights reserved.
 //
 
 #if canImport(QuartzCore)
