@@ -16,7 +16,7 @@ public extension FileManager {
     }
 
     func jsonFromFile(atPath path: String) throws -> Data {
-        if #available(iOS 16.0, *) {
+        if #available(macOS 13.0, iOS 16.0, *) {
             return try Data(contentsOf: URL(filePath: path), options: .mappedIfSafe)
         } else {
             return try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
