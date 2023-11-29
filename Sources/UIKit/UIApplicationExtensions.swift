@@ -55,7 +55,9 @@ public extension UIApplication {
             if let appStoreReceiptURL = Bundle.main.appStoreReceiptURL {
                 if appStoreReceiptURL.lastPathComponent.lowercased() == "sandboxreceipt" {
                     return .testFlight
-                } else if appStoreReceiptURL.path().lowercased().contains("simulator") {
+                } else if #available(macOS 13.0, iOS 16.0, *), appStoreReceiptURL.path().lowercased().contains("simulator") {
+                    return .debug
+                } else if appStoreReceiptURL.path.lowercased().contains("simulator") {
                     return .debug
                 } else {
                     return .appStore
@@ -64,7 +66,6 @@ public extension UIApplication {
                 return .debug
             }
         }
-
         #endif
     }
 
