@@ -41,6 +41,10 @@ public extension UIView {
         }
     }
 
+    var safeAreaLeft: CGFloat {
+        return self.safeAreaInsets.left
+    }
+
     var top: CGFloat {
         get {
             return self.frame.origin.y
@@ -48,6 +52,10 @@ public extension UIView {
         set {
             self.frame.origin.y = newValue
         }
+    }
+
+    var safeAreaTop: CGFloat {
+        return self.safeAreaInsets.top
     }
 
     var right: CGFloat {
@@ -59,6 +67,10 @@ public extension UIView {
         }
     }
 
+    var safeAreaRight: CGFloat {
+        return self.safeAreaInsets.right
+    }
+
     var bottom: CGFloat {
         get {
             return self.frame.origin.y + self.frame.size.height
@@ -66,6 +78,10 @@ public extension UIView {
         set {
             self.frame.origin.y = newValue - self.frame.size.height
         }
+    }
+
+    var safeAreaBottom: CGFloat {
+        return self.safeAreaInsets.bottom
     }
 
     var width: CGFloat {
@@ -216,6 +232,34 @@ public extension UIView {
 
     static func loadFromNib<T: UIView & NibLoadable>() -> T? {
         return T.nib.instantiate(withOwner: nil, options: nil).first as? T
+    }
+
+    static func fixedWidthFlexibleSpace(width: CGFloat) -> UIView {
+        let flexibleSpace = UIView()
+        flexibleSpace.translatesAutoresizingMaskIntoConstraints = false
+        flexibleSpace.widthAnchor.constraint(equalToConstant: width).isActive = true
+
+        flexibleSpace.setContentHuggingPriority(.required, for: .horizontal)
+        flexibleSpace.setContentCompressionResistancePriority(.required, for: .horizontal)
+
+        return flexibleSpace
+    }
+
+    static func fixedHeightFlexibleSpace(height: CGFloat) -> UIView {
+        let flexibleSpace = UIView()
+        flexibleSpace.translatesAutoresizingMaskIntoConstraints = false
+        flexibleSpace.heightAnchor.constraint(equalToConstant: height).isActive = true
+
+        flexibleSpace.setContentHuggingPriority(.required, for: .vertical)
+        flexibleSpace.setContentCompressionResistancePriority(.required, for: .vertical)
+
+        return flexibleSpace
+    }
+
+    static func flexibleSpace() -> UIView {
+        let flexibleSpace = UIView()
+
+        return flexibleSpace
     }
 
     func addSubviews(_ views: [UIView]) {
