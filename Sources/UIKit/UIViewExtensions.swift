@@ -41,6 +41,10 @@ public extension UIView {
         }
     }
 
+    var safeAreaLeft: CGFloat {
+        return self.safeAreaInsets.left
+    }
+
     var top: CGFloat {
         get {
             return self.frame.origin.y
@@ -48,6 +52,10 @@ public extension UIView {
         set {
             self.frame.origin.y = newValue
         }
+    }
+
+    var safeAreaTop: CGFloat {
+        return self.safeAreaInsets.top
     }
 
     var right: CGFloat {
@@ -59,6 +67,10 @@ public extension UIView {
         }
     }
 
+    var safeAreaRight: CGFloat {
+        return self.safeAreaInsets.right
+    }
+
     var bottom: CGFloat {
         get {
             return self.frame.origin.y + self.frame.size.height
@@ -66,6 +78,10 @@ public extension UIView {
         set {
             self.frame.origin.y = newValue - self.frame.size.height
         }
+    }
+
+    var safeAreaBottom: CGFloat {
+        return self.safeAreaInsets.bottom
     }
 
     var width: CGFloat {
