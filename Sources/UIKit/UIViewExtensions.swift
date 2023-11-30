@@ -234,6 +234,34 @@ public extension UIView {
         return T.nib.instantiate(withOwner: nil, options: nil).first as? T
     }
 
+    static func fixedWidthFlexibleSpace(width: CGFloat) -> UIView {
+        let flexibleSpace = UIView()
+        flexibleSpace.translatesAutoresizingMaskIntoConstraints = false
+        flexibleSpace.widthAnchor.constraint(equalToConstant: width).isActive = true
+
+        flexibleSpace.setContentHuggingPriority(.required, for: .horizontal)
+        flexibleSpace.setContentCompressionResistancePriority(.required, for: .horizontal)
+
+        return flexibleSpace
+    }
+
+    static func fixedHeightFlexibleSpace(height: CGFloat) -> UIView {
+        let flexibleSpace = UIView()
+        flexibleSpace.translatesAutoresizingMaskIntoConstraints = false
+        flexibleSpace.heightAnchor.constraint(equalToConstant: height).isActive = true
+
+        flexibleSpace.setContentHuggingPriority(.required, for: .vertical)
+        flexibleSpace.setContentCompressionResistancePriority(.required, for: .vertical)
+
+        return flexibleSpace
+    }
+
+    static func flexibleSpace() -> UIView {
+        let flexibleSpace = UIView()
+
+        return flexibleSpace
+    }
+
     func addSubviews(_ views: [UIView]) {
         for view in views {
             self.addSubview(view)
