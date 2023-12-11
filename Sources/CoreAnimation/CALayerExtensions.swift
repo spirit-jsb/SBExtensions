@@ -176,24 +176,10 @@ public extension CALayer {
         }
     }
 
-    func addBorder(color: UIColor?, width: CGFloat, corners: Corner?, radius: CGFloat?) {
+    func addBorder(color: UIColor?, width: CGFloat) {
         CALayer.performWithoutAnimation {
-            if let borderLayer = self.sublayer(where: { $0.name == "com.max.SBExtensions.border.layer" }) {
-                borderLayer.removeFromSuperlayer()
-            }
-
-            let roundedRect = self.bounds
-            let roundingCorners = (corners ?? self.corners).roundingCorners
-            let cornerRadii = CGSize(width: radius ?? self.cornerRadius, height: radius ?? self.cornerRadius)
-
-            let borderLayer = CAShapeLayer()
-            borderLayer.path = UIBezierPath(roundedRect: roundedRect, byRoundingCorners: roundingCorners, cornerRadii: cornerRadii).cgPath
-            borderLayer.fillColor = UIColor.clear.cgColor
-            borderLayer.strokeColor = color?.cgColor
-            borderLayer.lineWidth = ceil(width * UIScreen.current.scale) / UIScreen.current.scale
-            borderLayer.name = "com.max.SBExtensions.border.layer"
-
-            self.insertSublayer(borderLayer, at: 0)
+            self.borderWidth = ceil(width * UIScreen.current.scale) / UIScreen.current.scale
+            self.borderColor = color?.cgColor
         }
     }
 
