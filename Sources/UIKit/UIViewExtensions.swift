@@ -290,8 +290,8 @@ public extension UIView {
         self.layer.addRoundCorners(corners, radius: radius, clips: clips)
     }
 
-    func addBorder(color: UIColor?, width: CGFloat, corners: Corner?, radius: CGFloat?) {
-        self.layer.addBorder(color: color, width: width, corners: corners, radius: radius)
+    func addBorder(color: UIColor?, width: CGFloat) {
+        self.layer.addBorder(color: color, width: width)
     }
 
     func addShadow(color: UIColor?, x: CGFloat, y: CGFloat, blur: CGFloat, spread: CGFloat = 0.0, corners: Corner?, radius: CGFloat?) {
