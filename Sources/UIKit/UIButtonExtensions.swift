@@ -10,6 +10,11 @@
 
 import UIKit
 
+private struct AssociatedKeys {
+    @UniqueAddress
+    static var enlargedTouchArea
+}
+
 public extension UIButton {
     struct ImagePlacement: RawRepresentable {
         public static let top = ImagePlacement(rawValue: 1 << 0)
@@ -21,6 +26,31 @@ public extension UIButton {
 
         public init(rawValue: UInt) {
             self.rawValue = rawValue
+        }
+    }
+}
+
+public extension UIButton {
+    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        guard !self.isHidden || self.isEnabled || self.enlargedTouchArea != UIEdgeInsets.zero else {
+            return super.point(inside: point, with: event)
+        }
+        
+        let hitFrame = self.bounds.inset(by: self.enlargedTouchArea)
+        
+        return hitFrame.contains(point)
+    }
+}
+
+public extension UIButton {
+    var enlargedTouchArea: UIEdgeInsets {
+        get {
+            let enlargedTouchAreaValue: NSValue? = getAssociatedObject(self, AssociatedKeys.enlargedTouchArea)
+            
+            return enlargedTouchAreaValue.flatMap { $0.uiEdgeInsetsValue } ?? UIEdgeInsets.zero
+        }
+        set {
+            setAssociatedObject(self, AssociatedKeys.enlargedTouchArea, NSValue(uiEdgeInsets: newValue))
         }
     }
 }
@@ -58,6 +88,16 @@ public extension UIButton {
 
     func setImageForAllStates(_ image: UIImage?) {
         self.setImageForStates(image, states: self.states)
+    }
+    
+    func setBackgroundImageForStates(_ image: UIImage?, states: [UIControl.State]) {
+        states.forEach {
+            self.setBackgroundImage(image, for: $0)
+        }
+    }
+    
+    func setBackgroundImageForAllStates(_ image: UIImage?) {
+        self.setBackgroundImageForStates(image, states: self.states)
     }
 
     func setAttributedTitleForStates(_ title: NSAttributedString?, states: [UIControl.State]) {
