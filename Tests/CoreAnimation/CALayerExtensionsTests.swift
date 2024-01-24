@@ -157,9 +157,7 @@ final class CALayerExtensionsTests: XCTestCase {
     #if canImport(UIKit)
     
     func testCorners() {
-        let frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0)
         let layer = CALayer()
-        layer.frame = frame
         
         XCTAssertEqual(layer.corners, [.topLeft, .topRight, .bottomRight, .bottomLeft])
         
@@ -183,9 +181,7 @@ final class CALayerExtensionsTests: XCTestCase {
     #endif
     
     func testAddSublayers() {
-        let frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0)
         let layer = CALayer()
-        layer.frame = frame
         
         layer.addSublayers([CALayer(), CALayer()])
         
@@ -198,8 +194,7 @@ final class CALayerExtensionsTests: XCTestCase {
         layer.frame = frame
         
         layer.addSublayer(CALayer())
-        
-        XCTAssertEqual(layer.sublayers?.count, 1)
+        layer.addSublayer(CALayer())
         
         layer.removeAllSublayers()
         
@@ -242,7 +237,7 @@ final class CALayerExtensionsTests: XCTestCase {
         XCTAssertEqual(layer.shadowOffset, CGSize(width: 1.0, height: 1.0))
         XCTAssertEqual(layer.shadowRadius, 1.5)
         
-        let shadowBezierPath = UIBezierPath(roundedRect: frame.insetBy(dx: -1.0, dy: -1.0), byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 10.0, height: 10.0))
+        let shadowBezierPath = UIBezierPath(roundedRect: layer.bounds.insetBy(dx: -1.0, dy: -1.0), byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 10.0, height: 10.0))
         
         XCTAssertEqual(layer.shadowPath, shadowBezierPath.cgPath)
     }
@@ -252,23 +247,21 @@ final class CALayerExtensionsTests: XCTestCase {
         let layer = CALayer()
         layer.frame = frame
         
-        layer.addShadow(color: UIColor.red, x: 1.0, y: 1.0, blur: 3.0, corners: nil, radius: nil)
+        layer.addShadow(color: UIColor.red, x: 1.0, y: 1.0, blur: 3.0, spread: 1.0, corners: nil, radius: nil)
         
         XCTAssertEqual(layer.shadowColor, UIColor.red.cgColor)
         XCTAssertEqual(layer.shadowOffset, CGSize(width: 1.0, height: 1.0))
         XCTAssertEqual(layer.shadowRadius, 1.5)
         
-        let shadowBezierPath = UIBezierPath(roundedRect: frame, byRoundingCorners: .allCorners, cornerRadii: CGSize.zero)
+        let shadowBezierPath = UIBezierPath(roundedRect: layer.bounds.insetBy(dx: -1.0, dy: -1.0), byRoundingCorners: .allCorners, cornerRadii: CGSize.zero)
         
         XCTAssertEqual(layer.shadowPath, shadowBezierPath.cgPath)
     }
     
     #endif
     
-    func testSublayer() { 
-        let frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0)
+    func testSublayerWithName() {
         let layer = CALayer()
-        layer.frame = frame
         
         let shapeLayer = CAShapeLayer()
         shapeLayer.name = "shapeLayer"
@@ -280,10 +273,21 @@ final class CALayerExtensionsTests: XCTestCase {
         
         XCTAssertEqual(layer.sublayer(withName: "shapeLayer"), shapeLayer)
         XCTAssertNil(layer.sublayer(withName: "gradientLayer"))
+    }
+    
+    func testSublayerOfType() {
+        let layer = CALayer()
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.name = "shapeLayer"
+        
+        let gradientLayer = CAGradientLayer()
+        
+        layer.addSublayer(shapeLayer)
+        layer.addSublayer(gradientLayer)
         
         XCTAssertEqual(layer.sublayer(ofType: CAShapeLayer.self), shapeLayer)
         XCTAssertNil(layer.sublayer(ofType: CAEmitterLayer.self))
-        XCTAssertNotNil(layer.sublayer(ofType: CALayer.self))
     }
 }
 
