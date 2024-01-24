@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8F02C3F32B60A2B7006B2833 /* CALayerExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3F22B60A2B7006B2833 /* CALayerExtensionsTests.swift */; };
+		8F02C3F72B60DFF3006B2833 /* UIButtonExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3F62B60DFF3006B2833 /* UIButtonExtensionsTests.swift */; };
 		8F02C3F92B60EF66006B2833 /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3F82B60EF66006B2833 /* Runtime.swift */; };
 		8F02C3FB2B60F25F006B2833 /* UniqueAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3FA2B60F25F006B2833 /* UniqueAddress.swift */; };
+		8F02C3FF2B60F9A5006B2833 /* XCTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3FE2B60F9A5006B2833 /* XCTestExtensions.swift */; };
 		940C92BC2B01A028003003C1 /* CALayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92BB2B01A028003003C1 /* CALayerExtensions.swift */; };
 		940C92BE2B01A25B003003C1 /* Cornered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92BD2B01A25B003003C1 /* Cornered.swift */; };
 		940C92C12B01A8BE003003C1 /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92C02B01A8BE003003C1 /* CGColorExtensions.swift */; };
@@ -87,8 +89,10 @@
 
 /* Begin PBXFileReference section */
 		8F02C3F22B60A2B7006B2833 /* CALayerExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtensionsTests.swift; sourceTree = "<group>"; };
+		8F02C3F62B60DFF3006B2833 /* UIButtonExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensionsTests.swift; sourceTree = "<group>"; };
 		8F02C3F82B60EF66006B2833 /* Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
 		8F02C3FA2B60F25F006B2833 /* UniqueAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueAddress.swift; sourceTree = "<group>"; };
+		8F02C3FE2B60F9A5006B2833 /* XCTestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestExtensions.swift; sourceTree = "<group>"; };
 		940C92BB2B01A028003003C1 /* CALayerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtensions.swift; sourceTree = "<group>"; };
 		940C92BD2B01A25B003003C1 /* Cornered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cornered.swift; sourceTree = "<group>"; };
 		940C92C02B01A8BE003003C1 /* CGColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGColorExtensions.swift; sourceTree = "<group>"; };
@@ -174,6 +178,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F02C3FD2B60F8E5006B2833 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8F02C3FE2B60F9A5006B2833 /* XCTestExtensions.swift */,
+			);
+			name = Utils;
+			path = Tests/Utils;
+			sourceTree = "<group>";
+		};
 		940C92BF2B01A8A6003003C1 /* CoreGraphics */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +259,7 @@
 			children = (
 				947129382AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift */,
 				9471293C2AFCBA1700FEB8A4 /* UIBezierPathExtensionsTests.swift */,
+				8F02C3F62B60DFF3006B2833 /* UIButtonExtensionsTests.swift */,
 			);
 			name = UIKit;
 			path = Tests/UIKit;
@@ -342,6 +356,7 @@
 				9491C51A2B060FBB008811E5 /* CoreGraphics */,
 				947129322AFCA3FC00FEB8A4 /* Dispatch */,
 				947129352AFCA9EC00FEB8A4 /* UIKit */,
+				8F02C3FD2B60F8E5006B2833 /* Utils */,
 				9471292D2AFC8EE300FEB8A4 /* WebKit */,
 			);
 			name = Tests;
@@ -560,6 +575,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				947129342AFCA41400FEB8A4 /* DispatchQueueExtensionsTests.swift in Sources */,
+				8F02C3F72B60DFF3006B2833 /* UIButtonExtensionsTests.swift in Sources */,
+				8F02C3FF2B60F9A5006B2833 /* XCTestExtensions.swift in Sources */,
 				9471293D2AFCBA1700FEB8A4 /* UIBezierPathExtensionsTests.swift in Sources */,
 				948869492B0B092500E4D7C4 /* CGSizeExtensionsTests.swift in Sources */,
 				947129392AFCB1F600FEB8A4 /* UIAlertControllerExtensionsTests.swift in Sources */,
