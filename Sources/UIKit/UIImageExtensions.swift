@@ -74,7 +74,7 @@ public extension UIImage {
         context.render(outputImage, toBitmap: &bitmap, rowBytes: 4, bounds: CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0), format: .RGBA8, colorSpace: nil)
 
         // Convert pixel data to UIColor
-        return UIColor(red: CGFloat(bitmap[0]) / 225.0, green: CGFloat(bitmap[1]) / 225.0, blue: CGFloat(bitmap[2]) / 225.0, alpha: CGFloat(bitmap[3]) / 255.0)
+        return UIColor(red: CGFloat(bitmap[0]) / 255.0, green: CGFloat(bitmap[1]) / 255.0, blue: CGFloat(bitmap[2]) / 255.0, alpha: CGFloat(bitmap[3]) / 255.0)
     }
 
     #endif
