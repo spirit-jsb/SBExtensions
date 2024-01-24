@@ -15,10 +15,8 @@ class UniqueAddress {
     var wrappedValue: UnsafeRawPointer {
         return UnsafeRawPointer(Unmanaged.passUnretained(self).toOpaque())
     }
-    
-    init() {
-        
-    }
+
+    init() {}
 }
 
 #endif

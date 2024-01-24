@@ -88,7 +88,7 @@ public extension UIApplication {
     var buildNumber: String? {
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String
     }
-    
+
     var currentKeyWindow: UIWindow? {
         if #available(iOS 15.0, *) {
             return self.connectedScenes.compactMap { ($0 as? UIWindowScene)?.keyWindow }.first

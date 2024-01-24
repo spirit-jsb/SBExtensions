@@ -35,9 +35,9 @@ public extension UIButton {
         guard !self.isHidden || self.isEnabled || self.enlargedTouchArea != UIEdgeInsets.zero else {
             return super.point(inside: point, with: event)
         }
-        
+
         let hitFrame = self.bounds.inset(by: self.enlargedTouchArea)
-        
+
         return hitFrame.contains(point)
     }
 }
@@ -46,7 +46,7 @@ public extension UIButton {
     var enlargedTouchArea: UIEdgeInsets {
         get {
             let enlargedTouchAreaValue: NSValue? = getAssociatedObject(self, AssociatedKeys.enlargedTouchArea)
-            
+
             return enlargedTouchAreaValue.flatMap { $0.uiEdgeInsetsValue } ?? UIEdgeInsets.zero
         }
         set {
@@ -89,13 +89,13 @@ public extension UIButton {
     func setImageForAllStates(_ image: UIImage?) {
         self.setImageForStates(image, states: self.states)
     }
-    
+
     func setBackgroundImageForStates(_ image: UIImage?, states: [UIControl.State]) {
         states.forEach {
             self.setBackgroundImage(image, for: $0)
         }
     }
-    
+
     func setBackgroundImageForAllStates(_ image: UIImage?) {
         self.setBackgroundImageForStates(image, states: self.states)
     }
