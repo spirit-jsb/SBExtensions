@@ -31,9 +31,6 @@ func XCTAssertEqual(_ expression1: @autoclosure () throws -> UIColor, _ expressi
     color1.getRed(&red1, green: &green1, blue: &blue1, alpha: &alpha1)
     color2.getRed(&red2, green: &green2, blue: &blue2, alpha: &alpha2)
 
-    print(">>> red1 \(red1)")
-    print(">>> red2 \(red2)")
-
     XCTAssertEqual(red1, red2, accuracy: accuracy, message(), file: file, line: line)
     XCTAssertEqual(green1, green2, accuracy: accuracy, message(), file: file, line: line)
     XCTAssertEqual(blue1, blue2, accuracy: accuracy, message(), file: file, line: line)
