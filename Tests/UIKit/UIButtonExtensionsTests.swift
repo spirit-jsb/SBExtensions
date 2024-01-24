@@ -1,8 +1,9 @@
 //
 //  UIButtonExtensionsTests.swift
-//  SBExtensionsTests
 //
-//  Created by 菅思博 on 2024/1/24.
+//  Created by Max on 2024/1/24
+//
+//  Copyright © 2024 Max. All rights reserved.
 //
 
 @testable import SBExtensions
