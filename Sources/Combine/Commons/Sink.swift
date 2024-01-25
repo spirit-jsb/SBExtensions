@@ -10,7 +10,7 @@
 import Combine
 
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-class Sink<Upstream: Publisher, Downstream: Subscriber>: Subscriber {
+class Sink<Upstream, Downstream>: Subscriber where Upstream: Publisher, Downstream: Subscriber {
     typealias TransformOutput = (Upstream.Output) -> Downstream.Input?
     typealias TransformFailure = (Upstream.Failure) -> Downstream.Failure?
     
