@@ -22,13 +22,15 @@ final class FlatMapLatestTests: XCTestCase {
         var subscriptionCount = 0
         var cancelCount = 0
         
+        var isCompleted = false
+        
         let first = CurrentValueSubject<String, Never>("👦🏻")
         let second = CurrentValueSubject<String, Never>("🅰️")
         
         let subject = CurrentValueSubject<AnyPublisher<String, Never>, Never>(first.eraseToAnyPublisher())
         
         self.subscription = subject
-            .flatMapLatest { 
+            .flatMapLatest {
                 return $0.handleEvents(receiveSubscription: { _ in
                     subscriptionCount += 1
                 }, receiveCancel: {
@@ -36,20 +38,36 @@ final class FlatMapLatestTests: XCTestCase {
                 })
                 .eraseToAnyPublisher()
             }
-            .sink {
+            .sink(receiveCompletion: { _ in
+                isCompleted = true
+            }, receiveValue: {
                 value.append($0)
-            }
+            })
         
         first.send("🐱")
+        second.send("🅱️")
         
         subject.send(second.eraseToAnyPublisher())
         
         first.send("🐶")
-        second.send("🅱️")
+        second.send("🅰️")
         
-        XCTAssertEqual(value, "👦🏻🐱🅰️🅱️")
+        XCTAssertEqual(value, "👦🏻🐱🅱️🅰️")
+        
         XCTAssertEqual(subscriptionCount, 2)
         XCTAssertEqual(cancelCount, 1)
+        
+        subject.send(completion: .finished)
+        
+        XCTAssertFalse(isCompleted)
+        
+        first.send(completion: .finished)
+        
+        XCTAssertFalse(isCompleted)
+        
+        second.send(completion: .finished)
+        
+        XCTAssertTrue(isCompleted)
     }
 }
 
