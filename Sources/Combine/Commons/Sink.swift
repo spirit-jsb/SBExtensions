@@ -93,6 +93,12 @@ class Sink<Upstream: Publisher, Downstream: Subscriber>: Subscriber {
         self.cancelUpstream()
     }
     
+    func demand(_ demand: Subscribers.Demand) {
+        let newDemand = self.buffer.demand(demand)
+        
+        self.upstreamSubscription?.requestIfNeeded(newDemand)
+    }
+    
     func cancelUpstream() {
         guard !self.isUpstreamCancelled else {
             return
