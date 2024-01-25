@@ -11,7 +11,7 @@ import Combine
 import class Foundation.NSRecursiveLock
 
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-class DemandBuffer<S: Subscriber> {
+class DemandBuffer<S> where S: Subscriber {
     private let subscriber: S
     
     private let lock = NSRecursiveLock()
