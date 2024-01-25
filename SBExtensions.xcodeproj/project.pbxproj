@@ -346,8 +346,8 @@
 				940C92CF2B020417003003C1 /* Foundation */,
 				9491C5012B05E5BF008811E5 /* SwiftStdlib */,
 				94DDD22F2AF3388900077AA6 /* UIKit */,
-				940C92D32B02068E003003C1 /* Utils */,
 				94DDD2282AF333F200077AA6 /* WebKit */,
+				940C92D32B02068E003003C1 /* Utils */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
