@@ -1,0 +1,106 @@
+//
+//  Sink.swift
+//  SBExtensions
+//
+//  Created by 菅思博 on 2024/1/25.
+//
+
+#if canImport(Combine)
+
+import Combine
+
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+class Sink<Upstream: Publisher, Downstream: Subscriber>: Subscriber {
+    typealias TransformOutput = (Upstream.Output) -> Downstream.Input?
+    typealias TransformFailure = (Upstream.Failure) -> Downstream.Failure?
+    
+    private(set) var buffer: DemandBuffer<Downstream>
+    
+    private let transformOutput: TransformOutput?
+    private let transformFailure: TransformFailure?
+    
+    private var upstreamSubscription: Subscription?
+    
+    private var isUpstreamCancelled: Bool = false
+    
+    init(upstream: Upstream, downstream: Downstream, transformOutput: TransformOutput? = nil, transformFailure: TransformFailure? = nil) {
+        self.buffer = DemandBuffer(subscriber: downstream)
+        
+        self.transformOutput = transformOutput
+        self.transformFailure = transformFailure
+        
+        upstream
+            .handleEvents(receiveCancel: { [weak self] in
+                guard let strongSelf = self else {
+                    return
+                }
+                
+                strongSelf.isUpstreamCancelled = true
+            })
+            .subscribe(self)
+    }
+    
+    deinit {
+        self.cancelUpstream()
+    }
+    
+    func receive(subscription: Subscription) {
+        self.upstreamSubscription = subscription
+    }
+    
+    func receive(_ input: Upstream.Output) -> Subscribers.Demand {
+        guard let transform = self.transformOutput else {
+            fatalError("""
+            Missing output transformation
+            =============================
+            
+            You must either:
+                - Provide a transformation function from the upstream's output to the downstream's input;
+                - Subclass `Sink` with your own publisher's Sink and manage the buffer yourself
+            """)
+        }
+        
+        guard let input = transform(input) else {
+            return .none
+        }
+        
+        return self.buffer.buffer(value: input)
+    }
+    
+    func receive(completion: Subscribers.Completion<Upstream.Failure>) {
+        switch completion {
+            case .finished:
+                self.buffer.complete(completion: .finished)
+            case .failure(let error):
+                guard let transform = self.transformFailure else {
+                    fatalError("""
+                    Missing failure transformation
+                    ==============================
+                    
+                    You must either:
+                        - Provide a transformation function from the upstream's failure to the downstream's failuer;
+                        - Subclass `Sink` with your own publisher's Sink and manage the buffer yourself
+                    """)
+                }
+                
+                guard let error = transform(error) else {
+                    return
+                }
+                
+                self.buffer.complete(completion: .failure(error))
+        }
+        
+        self.cancelUpstream()
+    }
+    
+    func cancelUpstream() {
+        guard !self.isUpstreamCancelled else {
+            return
+        }
+        
+        self.upstreamSubscription.kill()
+    }
+}
+
+#endif
+
