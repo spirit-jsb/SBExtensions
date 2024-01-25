@@ -11,17 +11,17 @@ import Combine
 
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension Publisher {
-    func withLatestFrom<P, T>(_ other: P, resultSelector: @escaping (Output, P.Output) -> T) -> Publishers.WithLatestFrom<Self, P, T> where P: Publisher {
+    func withLatestFrom<P, T>(_ other: P, resultSelector: @escaping (Self.Output, P.Output) -> T) -> Publishers.WithLatestFrom<Self, P, T> where P: Publisher {
         return .init(upstream: self, second: other, resultSelector: resultSelector)
     }
     
-    func withLatestFrom<P, Q, T>(_ other: P, _ other1: Q, resultSelector: @escaping (Output, (P.Output, Q.Output)) -> T) -> Publishers.WithLatestFrom<Self, AnyPublisher<(P.Output, Q.Output), Self.Failure>, T> where P: Publisher, Q: Publisher, P.Failure == Failure, Q.Failure == Failure {
+    func withLatestFrom<P, Q, T>(_ other: P, _ other1: Q, resultSelector: @escaping (Self.Output, (P.Output, Q.Output)) -> T) -> Publishers.WithLatestFrom<Self, AnyPublisher<(P.Output, Q.Output), Self.Failure>, T> where P: Publisher, Q: Publisher, P.Failure == Self.Failure, Q.Failure == Self.Failure {
         let combined = other.combineLatest(other1).eraseToAnyPublisher()
         
         return .init(upstream: self, second: combined, resultSelector: resultSelector)
     }
     
-    func withLatestFrom<P, Q, R, T>(_ other: P, _ other1: Q, _ other2: R, resultSelector: @escaping (Output, (P.Output, Q.Output, R.Output)) -> T) -> Publishers.WithLatestFrom<Self, AnyPublisher<(P.Output, Q.Output, R.Output), Self.Failure>, T> where P: Publisher, Q: Publisher, R: Publisher, P.Failure == Failure, Q.Failure == Failure, R.Failure == Failure {
+    func withLatestFrom<P, Q, R, T>(_ other: P, _ other1: Q, _ other2: R, resultSelector: @escaping (Self.Output, (P.Output, Q.Output, R.Output)) -> T) -> Publishers.WithLatestFrom<Self, AnyPublisher<(P.Output, Q.Output, R.Output), Self.Failure>, T> where P: Publisher, Q: Publisher, R: Publisher, P.Failure == Self.Failure, Q.Failure == Self.Failure, R.Failure == Self.Failure {
         let combined = other.combineLatest(other1, other2).eraseToAnyPublisher()
         
         return .init(upstream: self, second: combined, resultSelector: resultSelector)
@@ -31,13 +31,13 @@ public extension Publisher {
         return .init(upstream: self, second: other) { $1 }
     }
     
-    func withLatestFrom<P, Q>(_ other: P, _ other1: Q) -> Publishers.WithLatestFrom<Self, AnyPublisher<(P.Output, Q.Output), Self.Failure>, (P.Output, Q.Output)> where P: Publisher, Q: Publisher, P.Failure == Failure, Q.Failure == Failure {
+    func withLatestFrom<P, Q>(_ other: P, _ other1: Q) -> Publishers.WithLatestFrom<Self, AnyPublisher<(P.Output, Q.Output), Self.Failure>, (P.Output, Q.Output)> where P: Publisher, Q: Publisher, P.Failure == Self.Failure, Q.Failure == Self.Failure {
         let combined = other.combineLatest(other1).eraseToAnyPublisher()
         
         return .init(upstream: self, second: combined) { $1 }
     }
     
-    func withLatestFrom<P, Q, R>(_ other: P, _ other1: Q, _ other2: R) -> Publishers.WithLatestFrom<Self, AnyPublisher<(P.Output, Q.Output, R.Output), Self.Failure>, (P.Output, Q.Output, R.Output)> where P: Publisher, Q: Publisher, R: Publisher, P.Failure == Failure, Q.Failure == Failure, R.Failure == Failure {
+    func withLatestFrom<P, Q, R>(_ other: P, _ other1: Q, _ other2: R) -> Publishers.WithLatestFrom<Self, AnyPublisher<(P.Output, Q.Output, R.Output), Self.Failure>, (P.Output, Q.Output, R.Output)> where P: Publisher, Q: Publisher, R: Publisher, P.Failure == Self.Failure, Q.Failure == Self.Failure, R.Failure == Self.Failure {
         let combined = other.combineLatest(other1, other2).eraseToAnyPublisher()
         
         return .init(upstream: self, second: combined) { $1 }
@@ -46,7 +46,7 @@ public extension Publisher {
 
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension Publishers {
-    struct WithLatestFrom<Upstream: Publisher, Other: Publisher, Output>: Publisher where Upstream.Failure == Other.Failure {
+    struct WithLatestFrom<Upstream, Other, Output>: Publisher where Upstream: Publisher, Other: Publisher, Upstream.Failure == Other.Failure {
         public typealias Failure = Upstream.Failure
         public typealias ResultSelector = (Upstream.Output, Other.Output) -> Output
         
@@ -68,7 +68,7 @@ public extension Publishers {
 
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 private extension Publishers.WithLatestFrom {
-    class Subscription<Downstream: Subscriber>: Combine.Subscription where Downstream.Input == Output, Downstream.Failure == Failure {
+    class Subscription<Downstream>: Combine.Subscription where Downstream: Subscriber, Downstream.Input == Output, Downstream.Failure == Failure {
         var description: String {
             return "WithLatestFrom.Subscription<\(Output.self), \(Failure.self)>"
         }
