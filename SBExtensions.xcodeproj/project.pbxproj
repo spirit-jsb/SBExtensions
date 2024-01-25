@@ -18,6 +18,7 @@
 		8F02C40A2B621122006B2833 /* WithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C4092B621122006B2833 /* WithLatestFrom.swift */; };
 		8F02C40C2B624313006B2833 /* FlatMapLatest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C40B2B624313006B2833 /* FlatMapLatest.swift */; };
 		8F02C40E2B6245A0006B2833 /* AssignOwnership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C40D2B6245A0006B2833 /* AssignOwnership.swift */; };
+		8F02C4122B624D98006B2833 /* AssignOwnershipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C4112B624D98006B2833 /* AssignOwnershipTests.swift */; };
 		940C92BC2B01A028003003C1 /* CALayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92BB2B01A028003003C1 /* CALayerExtensions.swift */; };
 		940C92BE2B01A25B003003C1 /* Cornered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92BD2B01A25B003003C1 /* Cornered.swift */; };
 		940C92C12B01A8BE003003C1 /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92C02B01A8BE003003C1 /* CGColorExtensions.swift */; };
@@ -105,6 +106,7 @@
 		8F02C4092B621122006B2833 /* WithLatestFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithLatestFrom.swift; sourceTree = "<group>"; };
 		8F02C40B2B624313006B2833 /* FlatMapLatest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapLatest.swift; sourceTree = "<group>"; };
 		8F02C40D2B6245A0006B2833 /* AssignOwnership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignOwnership.swift; sourceTree = "<group>"; };
+		8F02C4112B624D98006B2833 /* AssignOwnershipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignOwnershipTests.swift; sourceTree = "<group>"; };
 		940C92BB2B01A028003003C1 /* CALayerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtensions.swift; sourceTree = "<group>"; };
 		940C92BD2B01A25B003003C1 /* Cornered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cornered.swift; sourceTree = "<group>"; };
 		940C92C02B01A8BE003003C1 /* CGColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGColorExtensions.swift; sourceTree = "<group>"; };
@@ -225,6 +227,15 @@
 				8F02C4092B621122006B2833 /* WithLatestFrom.swift */,
 			);
 			path = Operators;
+			sourceTree = "<group>";
+		};
+		8F02C4102B624D59006B2833 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				8F02C4112B624D98006B2833 /* AssignOwnershipTests.swift */,
+			);
+			name = Combine;
+			path = Tests/Combine;
 			sourceTree = "<group>";
 		};
 		940C92BF2B01A8A6003003C1 /* CoreGraphics */ = {
@@ -394,6 +405,7 @@
 		94DDD2222AF32D3300077AA6 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8F02C4102B624D59006B2833 /* Combine */,
 				9491C5172B060D49008811E5 /* CoreAnimation */,
 				9491C51A2B060FBB008811E5 /* CoreGraphics */,
 				947129322AFCA3FC00FEB8A4 /* Dispatch */,
@@ -631,6 +643,7 @@
 				9471292F2AFC8EF700FEB8A4 /* WKWebViewExtensionsTests.swift in Sources */,
 				8F02C3F32B60A2B7006B2833 /* CALayerExtensionsTests.swift in Sources */,
 				9491C5192B060D69008811E5 /* CAGradientLayerExtensionsTests.swift in Sources */,
+				8F02C4122B624D98006B2833 /* AssignOwnershipTests.swift in Sources */,
 				9491C51C2B060FCD008811E5 /* CGColorExtensionsTests.swift in Sources */,
 				94E33CC22B0AFEC900AE684D /* CGRectExtensionsTests.swift in Sources */,
 				94E33CC02B0AF37C00AE684D /* CGPointExtensionsTests.swift in Sources */,
