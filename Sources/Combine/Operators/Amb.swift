@@ -1,8 +1,9 @@
 //
 //  Amb.swift
-//  SBExtensionsTests
 //
-//  Created by 菅思博 on 2024/1/25.
+//  Created by Max on 2024/1/26
+//
+//  Copyright © 2024 Max. All rights reserved.
 //
 
 #if canImport(Combine)
