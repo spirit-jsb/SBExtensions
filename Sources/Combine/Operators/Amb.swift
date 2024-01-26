@@ -20,7 +20,7 @@ public extension Publisher {
     }
     
     func amb<S>(with others: S) -> AnyPublisher<Self.Output, Self.Failure> where S: Collection, S.Element: Publisher, S.Element.Output == Self.Output, S.Element.Failure == Self.Failure {
-        return others.reduce(self.eraseToAnyPublisher()) { $0.amb(with: $1).eraseToAnyPublisher() }
+        return others.reduce(self.eraseToAnyPublisher()) { $0.amb($1).eraseToAnyPublisher() }
     }
 }
 
