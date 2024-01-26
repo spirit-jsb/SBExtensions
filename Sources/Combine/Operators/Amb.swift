@@ -60,7 +60,7 @@ public extension Publishers {
         }
         
         public func receive<S>(subscriber: S) where S: Subscriber, S.Input == Output, S.Failure == Failure {
-            
+            subscriber.receive(subscription: Subscription(first: self.first, second: self.second, downstream: subscriber))
         }
     }
 }
