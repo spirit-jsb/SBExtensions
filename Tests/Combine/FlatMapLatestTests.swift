@@ -14,7 +14,7 @@ import Combine
 
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 final class FlatMapLatestTests: XCTestCase {
-    var subscription: AnyCancellable!
+    var cancellable: AnyCancellable!
     
     func testFlatMapLatest() {
         var value = ""
@@ -29,7 +29,7 @@ final class FlatMapLatestTests: XCTestCase {
         
         let subject = CurrentValueSubject<AnyPublisher<String, Never>, Never>(first.eraseToAnyPublisher())
         
-        self.subscription = subject
+        self.cancellable = subject
             .flatMapLatest {
                 return $0.handleEvents(receiveSubscription: { _ in
                     subscriptionCount += 1

@@ -16,7 +16,7 @@ import Combine
 final class AssignOwnershipTests: XCTestCase {
     var subject: PassthroughSubject<Int, Never>!
     
-    var subscription: AnyCancellable!
+    var cancellable: AnyCancellable!
     
     var value = 0
     
@@ -25,7 +25,7 @@ final class AssignOwnershipTests: XCTestCase {
         
         self.value = 0
         
-        self.subscription = nil
+        self.cancellable = nil
         
         self.subject = PassthroughSubject<Int, Never>()
     }
@@ -33,7 +33,7 @@ final class AssignOwnershipTests: XCTestCase {
     func testStrongOwnership() {
         let initialRetainCount = CFGetRetainCount(self)
         
-        self.subscription = self.subject
+        self.cancellable = self.subject
             .assign(to: \.value, on: self, ownership: .strong)
         
         self.subject.send(10)
@@ -46,7 +46,7 @@ final class AssignOwnershipTests: XCTestCase {
     func testWeakOwnership() {
         let initialRetainCount = CFGetRetainCount(self)
         
-        self.subscription = self.subject
+        self.cancellable = self.subject
             .assign(to: \.value, on: self, ownership: .weak)
         
         self.subject.send(10)
@@ -59,7 +59,7 @@ final class AssignOwnershipTests: XCTestCase {
     func testUnownedOwnership() {
         let initialRetainCount = CFGetRetainCount(self)
         
-        self.subscription = self.subject
+        self.cancellable = self.subject
             .assign(to: \.value, on: self, ownership: .unowned)
         
         self.subject.send(10)

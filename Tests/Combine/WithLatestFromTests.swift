@@ -14,7 +14,7 @@ import Combine
 
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 final class WithLatestFromTests: XCTestCase {
-    var subscription: AnyCancellable!
+    var cancellable: AnyCancellable!
     
     func testWithLatestFrom() {
         var value = [String]()
@@ -24,7 +24,7 @@ final class WithLatestFromTests: XCTestCase {
         let first = PassthroughSubject<Int, Never>()
         let second = PassthroughSubject<String, Never>()
         
-        self.subscription = first
+        self.cancellable = first
             .withLatestFrom(second) { "\($0)\($1)" }
             .sink(receiveCompletion: { _ in
                 isCompleted = true
