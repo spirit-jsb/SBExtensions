@@ -23,6 +23,7 @@
 		8F02C4162B626079006B2833 /* WithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C4152B626079006B2833 /* WithLatestFromTests.swift */; };
 		8F02C4192B626591006B2833 /* Amb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C4172B62658D006B2833 /* Amb.swift */; };
 		8F02C41B2B633ECD006B2833 /* AmbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C41A2B633ECD006B2833 /* AmbTests.swift */; };
+		8F02C4292B637C80006B2833 /* AssignToMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C4282B637C80006B2833 /* AssignToMany.swift */; };
 		940C92BC2B01A028003003C1 /* CALayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92BB2B01A028003003C1 /* CALayerExtensions.swift */; };
 		940C92BE2B01A25B003003C1 /* Cornered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92BD2B01A25B003003C1 /* Cornered.swift */; };
 		940C92C12B01A8BE003003C1 /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92C02B01A8BE003003C1 /* CGColorExtensions.swift */; };
@@ -115,6 +116,7 @@
 		8F02C4152B626079006B2833 /* WithLatestFromTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithLatestFromTests.swift; sourceTree = "<group>"; };
 		8F02C4172B62658D006B2833 /* Amb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amb.swift; sourceTree = "<group>"; };
 		8F02C41A2B633ECD006B2833 /* AmbTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbTests.swift; sourceTree = "<group>"; };
+		8F02C4282B637C80006B2833 /* AssignToMany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignToMany.swift; sourceTree = "<group>"; };
 		940C92BB2B01A028003003C1 /* CALayerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtensions.swift; sourceTree = "<group>"; };
 		940C92BD2B01A25B003003C1 /* Cornered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cornered.swift; sourceTree = "<group>"; };
 		940C92C02B01A8BE003003C1 /* CGColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGColorExtensions.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			children = (
 				8F02C4172B62658D006B2833 /* Amb.swift */,
 				8F02C40D2B6245A0006B2833 /* AssignOwnership.swift */,
+				8F02C4282B637C80006B2833 /* AssignToMany.swift */,
 				8F02C40B2B624313006B2833 /* FlatMapLatest.swift */,
 				8F02C4092B621122006B2833 /* WithLatestFrom.swift */,
 			);
@@ -587,6 +590,7 @@
 				9426F06A2AF382CE0036B3AC /* UIFontExtensions.swift in Sources */,
 				940C92E12B021B32003003C1 /* NSAttributedStringExtensions.swift in Sources */,
 				940C92DB2B020A46003003C1 /* DateExtensions.swift in Sources */,
+				8F02C4292B637C80006B2833 /* AssignToMany.swift in Sources */,
 				940C92CC2B01C281003003C1 /* CLLocationCoordinate2DExtensions.swift in Sources */,
 				8F02C3FB2B60F25F006B2833 /* UniqueAddress.swift in Sources */,
 				9426F06C2AF383A80036B3AC /* UIGestureRecognizerExtensions.swift in Sources */,
