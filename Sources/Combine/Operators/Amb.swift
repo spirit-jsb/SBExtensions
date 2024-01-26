@@ -39,6 +39,13 @@ public extension Collection where Element: Publisher {
 }
 
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+private enum AmbDecision {
+    case neither
+    case first
+    case second
+}
+
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension Publishers {
     struct Amb<First, Second>: Publisher where First: Publisher, Second: Publisher, First.Output == Second.Output, First.Failure == Second.Failure {
         public typealias Output = First.Output
@@ -56,13 +63,6 @@ public extension Publishers {
             
         }
     }
-}
-
-@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-private enum AmbDecision {
-    case neither
-    case first
-    case second
 }
 
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
