@@ -18,7 +18,7 @@ public extension Publisher where Self.Failure == Never {
             object2[keyPath: keyPath2] = value
         }
     }
-    
+
     func assign<Root1, Root2, Root3>(to keyPath1: ReferenceWritableKeyPath<Root1, Self.Output>, on object1: Root1, and keyPath2: ReferenceWritableKeyPath<Root2, Self.Output>, on object2: Root2, and keyPath3: ReferenceWritableKeyPath<Root3, Self.Output>, on object3: Root3) -> AnyCancellable {
         return self.sink { value in
             object1[keyPath: keyPath1] = value

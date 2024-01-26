@@ -14,13 +14,13 @@ import Combine
 public extension Collection where Element: Publisher {
     func flatMapBatches(of size: Int) -> AnyPublisher<[Element.Output], Element.Failure> {
         precondition(size > 0, "Batch sizes must be positive")
-        
+
         let indexBreaks = sequence(first: startIndex, next: { $0 == endIndex ? nil : index($0, offsetBy: size, limitedBy: endIndex) ?? endIndex })
-        
+
         return Swift.zip(indexBreaks, indexBreaks.dropFirst())
             .publisher
             .setFailureType(to: Element.Failure.self)
-            .flatMap(maxPublishers: .max(1)) { self[$0..<$1].zip() }
+            .flatMap(maxPublishers: .max(1)) { self[$0 ..< $1].zip() }
             .eraseToAnyPublisher()
     }
 }
