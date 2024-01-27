@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50794F952B64030100E575EF /* FlatMapFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50794F942B64030100E575EF /* FlatMapFirst.swift */; };
 		8F02C3F32B60A2B7006B2833 /* CALayerExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3F22B60A2B7006B2833 /* CALayerExtensionsTests.swift */; };
 		8F02C3F72B60DFF3006B2833 /* UIButtonExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3F62B60DFF3006B2833 /* UIButtonExtensionsTests.swift */; };
 		8F02C3F92B60EF66006B2833 /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3F82B60EF66006B2833 /* Runtime.swift */; };
@@ -103,6 +104,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50794F942B64030100E575EF /* FlatMapFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapFirst.swift; sourceTree = "<group>"; };
 		8F02C3F22B60A2B7006B2833 /* CALayerExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtensionsTests.swift; sourceTree = "<group>"; };
 		8F02C3F62B60DFF3006B2833 /* UIButtonExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensionsTests.swift; sourceTree = "<group>"; };
 		8F02C3F82B60EF66006B2833 /* Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				8F02C4282B637C80006B2833 /* AssignToMany.swift */,
 				8F02C42C2B638002006B2833 /* Create.swift */,
 				8F02C4332B639321006B2833 /* FlatMapBatches.swift */,
+				50794F942B64030100E575EF /* FlatMapFirst.swift */,
 				8F02C40B2B624313006B2833 /* FlatMapLatest.swift */,
 				8F02C4092B621122006B2833 /* WithLatestFrom.swift */,
 				8F02C4352B639D57006B2833 /* ZipMany.swift */,
@@ -624,6 +627,7 @@
 				8F02C40A2B621122006B2833 /* WithLatestFrom.swift in Sources */,
 				8F02C40E2B6245A0006B2833 /* AssignOwnership.swift in Sources */,
 				947129412AFCC84300FEB8A4 /* UIBezierPathExtensions.swift in Sources */,
+				50794F952B64030100E575EF /* FlatMapFirst.swift in Sources */,
 				94DDD22E2AF3368400077AA6 /* DispatchQueueExtensions.swift in Sources */,
 				940C92D72B0208BC003003C1 /* URLRequestExtensions.swift in Sources */,
 				9491C4F72B04A824008811E5 /* UserDefaultsExtensions.swift in Sources */,
