@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50794F952B64030100E575EF /* FlatMapFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50794F942B64030100E575EF /* FlatMapFirst.swift */; };
+		50794F972B653F1900E575EF /* IgnoreFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50794F962B653F1900E575EF /* IgnoreFailure.swift */; };
 		8F02C3F32B60A2B7006B2833 /* CALayerExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3F22B60A2B7006B2833 /* CALayerExtensionsTests.swift */; };
 		8F02C3F72B60DFF3006B2833 /* UIButtonExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3F62B60DFF3006B2833 /* UIButtonExtensionsTests.swift */; };
 		8F02C3F92B60EF66006B2833 /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3F82B60EF66006B2833 /* Runtime.swift */; };
@@ -105,6 +106,7 @@
 
 /* Begin PBXFileReference section */
 		50794F942B64030100E575EF /* FlatMapFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapFirst.swift; sourceTree = "<group>"; };
+		50794F962B653F1900E575EF /* IgnoreFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreFailure.swift; sourceTree = "<group>"; };
 		8F02C3F22B60A2B7006B2833 /* CALayerExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtensionsTests.swift; sourceTree = "<group>"; };
 		8F02C3F62B60DFF3006B2833 /* UIButtonExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensionsTests.swift; sourceTree = "<group>"; };
 		8F02C3F82B60EF66006B2833 /* Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				8F02C42C2B638002006B2833 /* Create.swift */,
 				8F02C4332B639321006B2833 /* FlatMapBatches.swift */,
 				50794F942B64030100E575EF /* FlatMapFirst.swift */,
+				50794F962B653F1900E575EF /* IgnoreFailure.swift */,
 				8F02C40B2B624313006B2833 /* FlatMapLatest.swift */,
 				8F02C4092B621122006B2833 /* WithLatestFrom.swift */,
 				8F02C4352B639D57006B2833 /* ZipMany.swift */,
@@ -636,6 +639,7 @@
 				949850772AFE242700C0DB04 /* UISwitchExtensions.swift in Sources */,
 				8F02C42D2B638002006B2833 /* Create.swift in Sources */,
 				9491C4F12B0499EB008811E5 /* FileManagerExtensions.swift in Sources */,
+				50794F972B653F1900E575EF /* IgnoreFailure.swift in Sources */,
 				9491C5032B05E628008811E5 /* ArrayExtensions.swift in Sources */,
 				949850752AFE231600C0DB04 /* UIImageViewExtensions.swift in Sources */,
 				9491C5152B06088F008811E5 /* IntExtensions.swift in Sources */,
