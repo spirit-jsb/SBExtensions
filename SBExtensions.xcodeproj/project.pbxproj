@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50013E1F2B65D19D00F2A831 /* MapToValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50013E1E2B65D19D00F2A831 /* MapToValue.swift */; };
+		50013E212B65D27500F2A831 /* MergeMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50013E202B65D27500F2A831 /* MergeMany.swift */; };
 		50794F952B64030100E575EF /* FlatMapFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50794F942B64030100E575EF /* FlatMapFirst.swift */; };
 		50794F972B653F1900E575EF /* IgnoreFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50794F962B653F1900E575EF /* IgnoreFailure.swift */; };
 		50794F992B65448600E575EF /* MapToResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50794F982B65448600E575EF /* MapToResult.swift */; };
@@ -108,6 +109,7 @@
 
 /* Begin PBXFileReference section */
 		50013E1E2B65D19D00F2A831 /* MapToValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToValue.swift; sourceTree = "<group>"; };
+		50013E202B65D27500F2A831 /* MergeMany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeMany.swift; sourceTree = "<group>"; };
 		50794F942B64030100E575EF /* FlatMapFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapFirst.swift; sourceTree = "<group>"; };
 		50794F962B653F1900E575EF /* IgnoreFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreFailure.swift; sourceTree = "<group>"; };
 		50794F982B65448600E575EF /* MapToResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToResult.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				50794F982B65448600E575EF /* MapToResult.swift */,
 				8F02C40B2B624313006B2833 /* FlatMapLatest.swift */,
 				50013E1E2B65D19D00F2A831 /* MapToValue.swift */,
+				50013E202B65D27500F2A831 /* MergeMany.swift */,
 				8F02C4092B621122006B2833 /* WithLatestFrom.swift */,
 				8F02C4352B639D57006B2833 /* ZipMany.swift */,
 			);
@@ -627,6 +630,7 @@
 				8F02C4072B620785006B2833 /* Sink.swift in Sources */,
 				9498507A2AFE255B00C0DB04 /* CAGradientLayerExtensions.swift in Sources */,
 				9426F0782AF3901D0036B3AC /* UIScrollViewExtensions.swift in Sources */,
+				50013E212B65D27500F2A831 /* MergeMany.swift in Sources */,
 				9426F0702AF3868E0036B3AC /* UIStackViewExtensions.swift in Sources */,
 				9426F0742AF389C10036B3AC /* UIColorExtensions.swift in Sources */,
 				94DDD2332AF338E400077AA6 /* NibLoadable.swift in Sources */,
