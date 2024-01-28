@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50013E1F2B65D19D00F2A831 /* MapToValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50013E1E2B65D19D00F2A831 /* MapToValue.swift */; };
 		50794F952B64030100E575EF /* FlatMapFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50794F942B64030100E575EF /* FlatMapFirst.swift */; };
 		50794F972B653F1900E575EF /* IgnoreFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50794F962B653F1900E575EF /* IgnoreFailure.swift */; };
 		50794F992B65448600E575EF /* MapToResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50794F982B65448600E575EF /* MapToResult.swift */; };
@@ -106,6 +107,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50013E1E2B65D19D00F2A831 /* MapToValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToValue.swift; sourceTree = "<group>"; };
 		50794F942B64030100E575EF /* FlatMapFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapFirst.swift; sourceTree = "<group>"; };
 		50794F962B653F1900E575EF /* IgnoreFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreFailure.swift; sourceTree = "<group>"; };
 		50794F982B65448600E575EF /* MapToResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToResult.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				50794F962B653F1900E575EF /* IgnoreFailure.swift */,
 				50794F982B65448600E575EF /* MapToResult.swift */,
 				8F02C40B2B624313006B2833 /* FlatMapLatest.swift */,
+				50013E1E2B65D19D00F2A831 /* MapToValue.swift */,
 				8F02C4092B621122006B2833 /* WithLatestFrom.swift */,
 				8F02C4352B639D57006B2833 /* ZipMany.swift */,
 			);
@@ -637,6 +640,7 @@
 				94DDD22E2AF3368400077AA6 /* DispatchQueueExtensions.swift in Sources */,
 				940C92D72B0208BC003003C1 /* URLRequestExtensions.swift in Sources */,
 				9491C4F72B04A824008811E5 /* UserDefaultsExtensions.swift in Sources */,
+				50013E1F2B65D19D00F2A831 /* MapToValue.swift in Sources */,
 				8F02C3F92B60EF66006B2833 /* Runtime.swift in Sources */,
 				9426F06E2AF383EA0036B3AC /* UIScreenExtensions.swift in Sources */,
 				949850772AFE242700C0DB04 /* UISwitchExtensions.swift in Sources */,
