@@ -13,7 +13,7 @@ import Combine
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public protocol Relay: Publisher where Failure == Never {
     associatedtype Output
-    
+
     func accept(_ value: Output)
 }
 
