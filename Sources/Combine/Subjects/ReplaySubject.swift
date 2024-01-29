@@ -1,8 +1,9 @@
 //
 //  ReplaySubject.swift
-//  SBExtensions
 //
-//  Created by 菅思博 on 2024/1/29.
+//  Created by Max on 2024/1/29
+//
+//  Copyright © 2024 Max. All rights reserved.
 //
 
 #if canImport(Combine)
