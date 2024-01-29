@@ -58,8 +58,26 @@ private extension PassthroughRelay {
         }
         
         func forceFinish() {
+            self.sink?.shouldForwardCompletion = true
+            
             self.sink?.receive(completion: .finished)
+            
             self.sink = nil
+        }
+    }
+}
+
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+private extension PassthroughRelay {
+    class Sink<Upstream, Downstream>: SBExtensions.Sink<Upstream, Downstream> where Upstream: Publisher, Downstream: Subscriber {
+        var shouldForwardCompletion = false
+        
+        override func receive(completion: Subscribers.Completion<Upstream.Failure>) {
+            guard self.shouldForwardCompletion else {
+                return
+            }
+            
+            super.receive(completion: completion)
         }
     }
 }
