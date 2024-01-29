@@ -14,6 +14,7 @@
 		50794F952B64030100E575EF /* FlatMapFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50794F942B64030100E575EF /* FlatMapFirst.swift */; };
 		50794F972B653F1900E575EF /* IgnoreFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50794F962B653F1900E575EF /* IgnoreFailure.swift */; };
 		50794F992B65448600E575EF /* MapToResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50794F982B65448600E575EF /* MapToResult.swift */; };
+		50B4610F2B67DCF8000EA6ED /* ShareReplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4610E2B67DCF8000EA6ED /* ShareReplay.swift */; };
 		8F02C3F32B60A2B7006B2833 /* CALayerExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3F22B60A2B7006B2833 /* CALayerExtensionsTests.swift */; };
 		8F02C3F72B60DFF3006B2833 /* UIButtonExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3F62B60DFF3006B2833 /* UIButtonExtensionsTests.swift */; };
 		8F02C3F92B60EF66006B2833 /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C3F82B60EF66006B2833 /* Runtime.swift */; };
@@ -123,6 +124,7 @@
 		50794F942B64030100E575EF /* FlatMapFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapFirst.swift; sourceTree = "<group>"; };
 		50794F962B653F1900E575EF /* IgnoreFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreFailure.swift; sourceTree = "<group>"; };
 		50794F982B65448600E575EF /* MapToResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToResult.swift; sourceTree = "<group>"; };
+		50B4610E2B67DCF8000EA6ED /* ShareReplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareReplay.swift; sourceTree = "<group>"; };
 		8F02C3F22B60A2B7006B2833 /* CALayerExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtensionsTests.swift; sourceTree = "<group>"; };
 		8F02C3F62B60DFF3006B2833 /* UIButtonExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensionsTests.swift; sourceTree = "<group>"; };
 		8F02C3F82B60EF66006B2833 /* Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				50013E1E2B65D19D00F2A831 /* MapToValue.swift */,
 				50013E202B65D27500F2A831 /* MergeMany.swift */,
 				50013E242B66760700F2A831 /* RemoveAllDuplicates.swift */,
+				50B4610E2B67DCF8000EA6ED /* ShareReplay.swift */,
 				50013E262B667AC400F2A831 /* Toggle.swift */,
 				8F02C4092B621122006B2833 /* WithLatestFrom.swift */,
 				8F02C4352B639D57006B2833 /* ZipMany.swift */,
@@ -694,6 +697,7 @@
 				9426F06E2AF383EA0036B3AC /* UIScreenExtensions.swift in Sources */,
 				8FAE39EF2B6775DE00CCE4E0 /* CurrentValueRelay.swift in Sources */,
 				949850772AFE242700C0DB04 /* UISwitchExtensions.swift in Sources */,
+				50B4610F2B67DCF8000EA6ED /* ShareReplay.swift in Sources */,
 				8F02C42D2B638002006B2833 /* Create.swift in Sources */,
 				9491C4F12B0499EB008811E5 /* FileManagerExtensions.swift in Sources */,
 				50794F972B653F1900E575EF /* IgnoreFailure.swift in Sources */,
