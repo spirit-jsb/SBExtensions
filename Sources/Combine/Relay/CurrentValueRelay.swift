@@ -31,16 +31,6 @@ public class CurrentValueRelay<Output>: Relay {
         self.subject.send(value)
     }
     
-    public func subscribe<P>(_ publisher: P) -> AnyCancellable where P: Publisher, P.Output == Output, P.Failure == Never {
-        return publisher.sink(receiveValue: { [weak self] in
-            guard let strongSelf = self else {
-                return
-            }
-            
-            strongSelf.subject.send($0)
-        })
-    }
-    
     public func receive<S>(subscriber: S) where S: Subscriber,S.Input == Output, S.Failure == Never {
         let subscription = Subscription(upstream: self.subject, downstream: AnySubscriber(subscriber))
         

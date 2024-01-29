@@ -14,8 +14,6 @@ public protocol Relay: Publisher where Failure == Never {
     associatedtype Output
     
     func accept(_ value: Output)
-    
-    func subscribe<P>(_ publisher: P) -> AnyCancellable where P: Publisher, P.Output == Output, P.Failure == Failure
 }
 
 #endif
