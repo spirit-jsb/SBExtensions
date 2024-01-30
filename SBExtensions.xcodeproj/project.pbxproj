@@ -36,6 +36,7 @@
 		8F02C42D2B638002006B2833 /* Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C42C2B638002006B2833 /* Create.swift */; };
 		8F02C4342B639321006B2833 /* FlatMapBatches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C4332B639321006B2833 /* FlatMapBatches.swift */; };
 		8F02C4362B639D57006B2833 /* ZipMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C4352B639D57006B2833 /* ZipMany.swift */; };
+		8F94D5912B68924100DD87E2 /* RetryWhenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94D5902B68924100DD87E2 /* RetryWhenTests.swift */; };
 		8FAE39E82B673C2500CCE4E0 /* ReplaySubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAE39E72B673C2500CCE4E0 /* ReplaySubject.swift */; };
 		8FAE39EB2B6772C600CCE4E0 /* Relay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAE39EA2B6772C600CCE4E0 /* Relay.swift */; };
 		8FAE39ED2B6775D200CCE4E0 /* PassthroughRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAE39EC2B6775D200CCE4E0 /* PassthroughRelay.swift */; };
@@ -147,6 +148,7 @@
 		8F02C42C2B638002006B2833 /* Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
 		8F02C4332B639321006B2833 /* FlatMapBatches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapBatches.swift; sourceTree = "<group>"; };
 		8F02C4352B639D57006B2833 /* ZipMany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipMany.swift; sourceTree = "<group>"; };
+		8F94D5902B68924100DD87E2 /* RetryWhenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryWhenTests.swift; sourceTree = "<group>"; };
 		8FAE39E72B673C2500CCE4E0 /* ReplaySubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaySubject.swift; sourceTree = "<group>"; };
 		8FAE39EA2B6772C600CCE4E0 /* Relay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relay.swift; sourceTree = "<group>"; };
 		8FAE39EC2B6775D200CCE4E0 /* PassthroughRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughRelay.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				8F02C4132B6251EF006B2833 /* FlatMapLatestTests.swift */,
 				8FAE3A382B67B35A00CCE4E0 /* PassthroughRelayTests.swift */,
 				8F02C4152B626079006B2833 /* WithLatestFromTests.swift */,
+				8F94D5902B68924100DD87E2 /* RetryWhenTests.swift */,
 			);
 			name = Combine;
 			path = Tests/Combine;
@@ -750,6 +753,7 @@
 				8F02C4142B6251EF006B2833 /* FlatMapLatestTests.swift in Sources */,
 				8F02C3F32B60A2B7006B2833 /* CALayerExtensionsTests.swift in Sources */,
 				9491C5192B060D69008811E5 /* CAGradientLayerExtensionsTests.swift in Sources */,
+				8F94D5912B68924100DD87E2 /* RetryWhenTests.swift in Sources */,
 				8F02C4122B624D98006B2833 /* AssignOwnershipTests.swift in Sources */,
 				8F02C4162B626079006B2833 /* WithLatestFromTests.swift in Sources */,
 				9491C51C2B060FCD008811E5 /* CGColorExtensionsTests.swift in Sources */,
