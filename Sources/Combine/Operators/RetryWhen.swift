@@ -71,12 +71,10 @@ extension Publishers.RetryWhen {
                             }
                     }
                 }, receiveValue: { [upstream, sink] _ in
-                    if let sink = sink {
-                        upstream.subscribe(sink)
-                    }
+//                    if let sink = sink {
+//                        upstream.subscribe(sink)
+//                    }
                 })
-
-            upstream.subscribe(self.sink!)
         }
 
         func request(_ demand: Subscribers.Demand) {
@@ -84,6 +82,10 @@ extension Publishers.RetryWhen {
         }
 
         func cancel() {
+            self.cancellable?.cancel()
+            self.cancellable = nil
+            
+            self.sink?.cancelUpstream()
             self.sink = nil
         }
     }

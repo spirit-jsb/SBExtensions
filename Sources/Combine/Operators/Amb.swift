@@ -151,7 +151,7 @@ private extension Publishers.Amb {
         override func receive(_ input: Upstream.Output) -> Subscribers.Demand {
             self.handler()
 
-            return self.buffer.buffer(value: input)
+            return self.buffer.enqueue(value: input)
         }
 
         override func receive(completion: Subscribers.Completion<Upstream.Failure>) {

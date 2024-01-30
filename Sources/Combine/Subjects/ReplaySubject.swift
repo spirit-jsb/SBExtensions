@@ -163,7 +163,7 @@ extension ReplaySubject {
         }
 
         func forwardValueToBuffer(_ value: Output) {
-            _ = self.demandBuffer?.buffer(value: value)
+            _ = self.demandBuffer?.enqueue(value: value)
         }
 
         func forwardCompletionToBuffer(_ completion: Subscribers.Completion<Failure>) {

@@ -91,12 +91,12 @@ final class RetryWhenTests: XCTestCase {
         
         var count = 1
         
-        self.cancellable =  AnyPublisher<String, TestableError>.create { subscribe in
+        self.cancellable = AnyPublisher<String, TestableError>.create { subscribe in
             subscribe.send("0⃣️")
             subscribe.send("1⃣️")
             subscribe.send("2⃣️")
             
-            if count == 1 {
+            if count < 3 {
                 subscribe.send(completion: .failure(TestableError.error))
                 
                 count += 1
@@ -115,8 +115,9 @@ final class RetryWhenTests: XCTestCase {
                 value.append($0)
             })
         
-        XCTAssertEqual(value, "0⃣️1⃣️2⃣️3⃣️4⃣️5⃣️")
+        XCTAssertEqual(value, "0⃣️1⃣️2⃣️0⃣️1⃣️2⃣️0⃣️1⃣️2⃣️3⃣️4⃣️5⃣️")
         XCTAssertEqual(completion, .finished)
+        XCTAssertEqual(count, 3)
     }
 }
 

@@ -78,7 +78,7 @@ private extension Publishers.Create {
                     return
                 }
 
-                _ = strongSelf.buffer.buffer(value: $0)
+                _ = strongSelf.buffer.enqueue(value: $0)
             }, completionHandler: { [weak self] in
                 guard let strongSelf = self else {
                     return
