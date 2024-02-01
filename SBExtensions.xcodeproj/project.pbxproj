@@ -37,7 +37,6 @@
 		8F02C4342B639321006B2833 /* FlatMapBatches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C4332B639321006B2833 /* FlatMapBatches.swift */; };
 		8F02C4362B639D57006B2833 /* ZipMany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02C4352B639D57006B2833 /* ZipMany.swift */; };
 		8F94D5912B68924100DD87E2 /* RetryWhenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94D5902B68924100DD87E2 /* RetryWhenTests.swift */; };
-		8F94D5932B68CFC000DD87E2 /* RetryWithBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94D5922B68CFC000DD87E2 /* RetryWithBehavior.swift */; };
 		8F94D5952B68D8E700DD87E2 /* RetryWithBehaviorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F94D5942B68D8E700DD87E2 /* RetryWithBehaviorTests.swift */; };
 		8FAE39E82B673C2500CCE4E0 /* ReplaySubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAE39E72B673C2500CCE4E0 /* ReplaySubject.swift */; };
 		8FAE39EB2B6772C600CCE4E0 /* Relay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAE39EA2B6772C600CCE4E0 /* Relay.swift */; };
@@ -45,6 +44,7 @@
 		8FAE39EF2B6775DE00CCE4E0 /* CurrentValueRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAE39EE2B6775DE00CCE4E0 /* CurrentValueRelay.swift */; };
 		8FAE39F12B678E8A00CCE4E0 /* CurrentValueRelayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAE39F02B678E8900CCE4E0 /* CurrentValueRelayTests.swift */; };
 		8FAE3A392B67B35A00CCE4E0 /* PassthroughRelayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAE3A382B67B35A00CCE4E0 /* PassthroughRelayTests.swift */; };
+		8FBEC0522B6A3F6300407460 /* RetryBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBEC0512B6A3F6300407460 /* RetryBehavior.swift */; };
 		940C92BC2B01A028003003C1 /* CALayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92BB2B01A028003003C1 /* CALayerExtensions.swift */; };
 		940C92BE2B01A25B003003C1 /* Cornered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92BD2B01A25B003003C1 /* Cornered.swift */; };
 		940C92C12B01A8BE003003C1 /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C92C02B01A8BE003003C1 /* CGColorExtensions.swift */; };
@@ -151,7 +151,6 @@
 		8F02C4332B639321006B2833 /* FlatMapBatches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapBatches.swift; sourceTree = "<group>"; };
 		8F02C4352B639D57006B2833 /* ZipMany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipMany.swift; sourceTree = "<group>"; };
 		8F94D5902B68924100DD87E2 /* RetryWhenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryWhenTests.swift; sourceTree = "<group>"; };
-		8F94D5922B68CFC000DD87E2 /* RetryWithBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryWithBehavior.swift; sourceTree = "<group>"; };
 		8F94D5942B68D8E700DD87E2 /* RetryWithBehaviorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryWithBehaviorTests.swift; sourceTree = "<group>"; };
 		8FAE39E72B673C2500CCE4E0 /* ReplaySubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaySubject.swift; sourceTree = "<group>"; };
 		8FAE39EA2B6772C600CCE4E0 /* Relay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relay.swift; sourceTree = "<group>"; };
@@ -159,6 +158,7 @@
 		8FAE39EE2B6775DE00CCE4E0 /* CurrentValueRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentValueRelay.swift; sourceTree = "<group>"; };
 		8FAE39F02B678E8900CCE4E0 /* CurrentValueRelayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentValueRelayTests.swift; sourceTree = "<group>"; };
 		8FAE3A382B67B35A00CCE4E0 /* PassthroughRelayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughRelayTests.swift; sourceTree = "<group>"; };
+		8FBEC0512B6A3F6300407460 /* RetryBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryBehavior.swift; sourceTree = "<group>"; };
 		940C92BB2B01A028003003C1 /* CALayerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtensions.swift; sourceTree = "<group>"; };
 		940C92BD2B01A25B003003C1 /* Cornered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cornered.swift; sourceTree = "<group>"; };
 		940C92C02B01A8BE003003C1 /* CGColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGColorExtensions.swift; sourceTree = "<group>"; };
@@ -289,7 +289,7 @@
 				50013E202B65D27500F2A831 /* MergeMany.swift */,
 				50013E242B66760700F2A831 /* RemoveAllDuplicates.swift */,
 				50B461102B67DEE5000EA6ED /* RetryWhen.swift */,
-				8F94D5922B68CFC000DD87E2 /* RetryWithBehavior.swift */,
+				8FBEC0512B6A3F6300407460 /* RetryBehavior.swift */,
 				50B4610E2B67DCF8000EA6ED /* ShareReplay.swift */,
 				50013E262B667AC400F2A831 /* Toggle.swift */,
 				8F02C4092B621122006B2833 /* WithLatestFrom.swift */,
@@ -685,6 +685,7 @@
 				940C92BC2B01A028003003C1 /* CALayerExtensions.swift in Sources */,
 				940C92DD2B0219B1003003C1 /* LocaleExtensions.swift in Sources */,
 				8F02C4072B620785006B2833 /* Sink.swift in Sources */,
+				8FBEC0522B6A3F6300407460 /* RetryBehavior.swift in Sources */,
 				9498507A2AFE255B00C0DB04 /* CAGradientLayerExtensions.swift in Sources */,
 				9426F0782AF3901D0036B3AC /* UIScrollViewExtensions.swift in Sources */,
 				50013E212B65D27500F2A831 /* MergeMany.swift in Sources */,
@@ -719,7 +720,6 @@
 				940C92C92B01B66A003003C1 /* CGRectExtensions.swift in Sources */,
 				940C92BE2B01A25B003003C1 /* Cornered.swift in Sources */,
 				940C92C72B01B1F4003003C1 /* CGSizeExtensions.swift in Sources */,
-				8F94D5932B68CFC000DD87E2 /* RetryWithBehavior.swift in Sources */,
 				50794F992B65448600E575EF /* MapToResult.swift in Sources */,
 				940C92DF2B021A10003003C1 /* NotificationCenterExtensions.swift in Sources */,
 				940C92D92B02091C003003C1 /* DataExtensions.swift in Sources */,
