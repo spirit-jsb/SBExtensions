@@ -13,20 +13,31 @@ import class Foundation.NSRecursiveLock
 
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 class DemandBuffer<S> where S: Subscriber {
+    var pendingDemand: Subscribers.Demand {
+        self.lock.lock()
+        defer {
+            self.lock.unlock()
+        }
+        
+        self.demandState.sent = self.demandState.requested
+        return self.demandState.requested - self.demandState.processed
+    }
+    
     private let subscriber: S
     
     private let lock = NSRecursiveLock()
     
     private var completion: Subscribers.Completion<S.Failure>?
     
-    private var buffer = [S.Input]()
     private var demandState = DemandState()
+    
+    private var values = [S.Input]()
     
     init(subscriber: S) {
         self.subscriber = subscriber
     }
     
-    func enqueue(value: S.Input) -> Subscribers.Demand {
+    func buffer(_ value: S.Input) -> Subscribers.Demand {
         precondition(self.completion == nil, "Completion have already occured.")
         
         self.lock.lock()
@@ -38,27 +49,13 @@ class DemandBuffer<S> where S: Subscriber {
             case .unlimited:
                 return self.subscriber.receive(value)
             default:
-                self.buffer.append(value)
+                self.values.append(value)
                 
                 return self.processDemand()
         }
     }
     
-    func request(demand: Subscribers.Demand) -> Subscribers.Demand {
-        return self.processDemand(adding: demand)
-    }
-    
-    func pendingDemand() -> Subscribers.Demand {
-        self.lock.lock()
-        defer {
-            self.lock.unlock()
-        }
-        
-        self.demandState.sent = self.demandState.requested
-        return self.demandState.requested - self.demandState.processed
-    }
-    
-    func finish(with completion: Subscribers.Completion<S.Failure>) {
+    func complete(completion: Subscribers.Completion<S.Failure>) {
         precondition(self.completion == nil, "Completion have already occured.")
         
         self.completion = completion
@@ -66,27 +63,32 @@ class DemandBuffer<S> where S: Subscriber {
         _ = self.processDemand()
     }
     
-    private func processDemand(adding newDemand: Subscribers.Demand? = nil) -> Subscribers.Demand {
+    func demand(_ demand: Subscribers.Demand) -> Subscribers.Demand {
+        return self.processDemand(demand)
+    }
+    
+    private func processDemand(_ demand: Subscribers.Demand? = nil) -> Subscribers.Demand {
         self.lock.lock()
         defer {
             self.lock.unlock()
         }
         
-        if let newDemand = newDemand {
-            self.demandState.requested += newDemand
+        if let demand = demand {
+            self.demandState.requested += demand
         }
         
-        guard self.demandState.requested > 0 || newDemand == Subscribers.Demand.none else {
+        guard self.demandState.requested > 0 || demand == Subscribers.Demand.none else {
             return .none
         }
         
-        while !self.buffer.isEmpty && self.demandState.processed < self.demandState.requested {
-            self.demandState.requested += self.subscriber.receive(self.buffer.remove(at: 0))
+        while !self.values.isEmpty && self.demandState.processed < self.demandState.requested {
+            self.demandState.requested += self.subscriber.receive(self.values.removeFirst())
             self.demandState.processed += 1
         }
         
         if let completion = self.completion {
-            self.buffer = []
+            self.values = []
+            
             self.demandState = DemandState()
             
             self.completion = nil
@@ -120,14 +122,6 @@ extension Subscription {
         }
         
         self.request(demand)
-    }
-}
-
-@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-extension Optional where Wrapped == Subscription {
-    mutating func kill() {
-        self?.cancel()
-        self = nil
     }
 }
 

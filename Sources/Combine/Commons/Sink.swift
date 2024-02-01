@@ -22,7 +22,7 @@ class Sink<Upstream, Downstream>: Subscriber where Upstream: Publisher, Downstre
     
     private var upstreamSubscription: Subscription?
     
-    private var isUpstreamCancelled: Bool = false
+    private var isUpstreamSubscriptionCancelled: Bool = false
     
     init(upstream: Upstream, downstream: Downstream, transformOutput: TransformOutput? = nil, transformFailure: TransformFailure? = nil) {
         self.demandBuffer = DemandBuffer(subscriber: downstream)
@@ -32,20 +32,23 @@ class Sink<Upstream, Downstream>: Subscriber where Upstream: Publisher, Downstre
         
         upstream
             .handleEvents(receiveCancel: { [weak self] in
-                guard let strongSelf = self else {
-                    return
-                }
-                
-                strongSelf.isUpstreamCancelled = true
+                self?.isUpstreamSubscriptionCancelled = true
             })
             .subscribe(self)
     }
     
     deinit {
-        self.cancelUpstream()
+        self.cancelUpstreamSubscription()
     }
     
     func receive(subscription: Subscription) {
+        if let upstreamSubscription = self.upstreamSubscription {
+            upstreamSubscription.cancel()
+            
+            let pendingDemand = self.demandBuffer.pendingDemand
+            subscription.requestIfNeeded(pendingDemand)
+        }
+        
         self.upstreamSubscription = subscription
     }
     
@@ -65,13 +68,13 @@ class Sink<Upstream, Downstream>: Subscriber where Upstream: Publisher, Downstre
             return .none
         }
         
-        return self.demandBuffer.enqueue(value: input)
+        return self.demandBuffer.buffer(input)
     }
     
     func receive(completion: Subscribers.Completion<Upstream.Failure>) {
         switch completion {
             case .finished:
-                self.demandBuffer.finish(with: .finished)
+                self.demandBuffer.complete(completion: .finished)
             case let .failure(error):
                 guard let transform = self.transformFailure else {
                     fatalError("""
@@ -88,23 +91,24 @@ class Sink<Upstream, Downstream>: Subscriber where Upstream: Publisher, Downstre
                     return
                 }
                 
-                self.demandBuffer.finish(with: .failure(error))
+                self.demandBuffer.complete(completion: .failure(error))
         }
         
-        self.cancelUpstream()
+        self.cancelUpstreamSubscription()
     }
     
-    func demand(_ demand: Subscribers.Demand) {
-        let newDemand = self.demandBuffer.request(demand: demand)
+    func request(_ demand: Subscribers.Demand) {
+        let newDemand = self.demandBuffer.demand(demand)
         self.upstreamSubscription?.requestIfNeeded(newDemand)
     }
     
-    func cancelUpstream() {
-        guard !self.isUpstreamCancelled else {
+    func cancelUpstreamSubscription() {
+        guard !self.isUpstreamSubscriptionCancelled else {
             return
         }
         
-        self.upstreamSubscription.kill()
+        self.upstreamSubscription?.cancel()
+        self.upstreamSubscription = nil
     }
 }
 

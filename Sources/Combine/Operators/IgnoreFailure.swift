@@ -15,8 +15,8 @@ public extension Publisher {
     func ignoreFailure(completeImmediately: Bool = true) -> AnyPublisher<Output, Never> {
         return self.catch { _ in Empty(completeImmediately: completeImmediately) }.eraseToAnyPublisher()
     }
-
-    func ignoreFailure<E>(failureType: E.Type, completeImmediately: Bool = true) -> AnyPublisher<Output, E> where E: Swift.Error {
+    
+    func ignoreFailure<E>(failureType: E.Type, completeImmediately: Bool = true) -> AnyPublisher<Output, E> where E: Error {
         return self.ignoreFailure(completeImmediately: completeImmediately)
             .setFailureType(to: failureType)
             .eraseToAnyPublisher()

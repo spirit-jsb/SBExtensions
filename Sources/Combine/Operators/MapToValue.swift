@@ -15,7 +15,7 @@ public extension Publisher {
     func mapToValue<T>(_ value: T) -> Publishers.Map<Self, T> {
         return self.map { _ in value }
     }
-
+    
     func mapToVoid() -> Publishers.Map<Self, Void> {
         return self.map { _ in }
     }

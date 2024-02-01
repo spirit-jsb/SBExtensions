@@ -17,8 +17,8 @@ public enum ObjectOwnership {
 }
 
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-public extension Publisher where Self.Failure == Never {
-    func assign<Root>(to keyPath: ReferenceWritableKeyPath<Root, Self.Output>, on object: Root, ownership: ObjectOwnership) -> AnyCancellable where Root: AnyObject {
+public extension Publisher where Failure == Never {
+    func assign<Root>(to keyPath: ReferenceWritableKeyPath<Root, Output>, on object: Root, ownership: ObjectOwnership) -> AnyCancellable where Root: AnyObject {
         switch ownership {
             case .strong:
                 return self.assign(to: keyPath, on: object)

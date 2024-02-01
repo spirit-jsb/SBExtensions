@@ -15,7 +15,7 @@ public extension AnyPublisher {
     static func create(_ subscribe: @escaping Publishers.Create<Output, Failure>.SubscribeHandler) -> AnyPublisher<Output, Failure> {
         return AnyPublisher(subscribe)
     }
-
+    
     init(_ subscribe: @escaping Publishers.Create<Output, Failure>.SubscribeHandler) {
         self = Publishers.Create(subscribeHandler: subscribe).eraseToAnyPublisher()
     }
@@ -23,15 +23,15 @@ public extension AnyPublisher {
 
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension Publishers {
-    struct Create<Output, Failure>: Publisher where Failure: Swift.Error {
+    struct Create<Output, Failure>: Publisher where Failure: Error {
         public typealias SubscribeHandler = (Subscriber) -> Cancellable
-
+        
         private let subscribeHandler: SubscribeHandler
-
+        
         public init(subscribeHandler: @escaping SubscribeHandler) {
             self.subscribeHandler = subscribeHandler
         }
-
+        
         public func receive<S>(subscriber: S) where S: Combine.Subscriber, S.Input == Output, S.Failure == Failure {
             subscriber.receive(subscription: Subscription(downstream: subscriber, subscribeHandler: self.subscribeHandler))
         }
@@ -43,16 +43,16 @@ public extension Publishers.Create {
     struct Subscriber {
         private let valueHandler: (Output) -> Void
         private let completionHandler: (Subscribers.Completion<Failure>) -> Void
-
+        
         init(valueHandler: @escaping (Output) -> Void, completionHandler: @escaping (Subscribers.Completion<Failure>) -> Void) {
             self.valueHandler = valueHandler
             self.completionHandler = completionHandler
         }
-
+        
         public func send(_ input: Output) {
             self.valueHandler(input)
         }
-
+        
         public func send(completion: Subscribers.Completion<Failure>) {
             self.completionHandler(completion)
         }
@@ -62,40 +62,29 @@ public extension Publishers.Create {
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 private extension Publishers.Create {
     class Subscription<Downstream>: Combine.Subscription where Downstream: Combine.Subscriber, Downstream.Input == Output, Downstream.Failure == Failure {
-        var description: String {
-            return "Create.Subscription<\(Output.self), \(Failure.self)>"
-        }
-
-        private let buffer: DemandBuffer<Downstream>
-
+        private let demandBuffer: DemandBuffer<Downstream>
+        
         private var cancellable: Cancellable?
-
+        
         init(downstream: Downstream, subscribeHandler: @escaping SubscribeHandler) {
-            self.buffer = DemandBuffer(subscriber: downstream)
-
+            self.demandBuffer = DemandBuffer(subscriber: downstream)
+            
             let subscriber = Subscriber(valueHandler: { [weak self] in
-                guard let strongSelf = self else {
-                    return
-                }
-
-                _ = strongSelf.buffer.enqueue(value: $0)
+                _ = self?.demandBuffer.buffer($0)
             }, completionHandler: { [weak self] in
-                guard let strongSelf = self else {
-                    return
-                }
-
-                strongSelf.buffer.complete(completion: $0)
+                self?.demandBuffer.complete(completion: $0)
             })
-
+            
             self.cancellable = subscribeHandler(subscriber)
         }
-
+        
         func request(_ demand: Subscribers.Demand) {
-            _ = self.buffer.demand(demand)
+            _ = self.demandBuffer.demand(demand)
         }
-
+        
         func cancel() {
             self.cancellable?.cancel()
+            self.cancellable = nil
         }
     }
 }

@@ -15,30 +15,28 @@ import class Foundation.NSRecursiveLock
 public extension Publisher {
     func flatMapFirst<P>(_ transform: @escaping (Output) -> P) -> Publishers.FlatMap<Publishers.HandleEvents<P>, Publishers.Filter<Self>> where P: Publisher, P.Failure == Failure {
         let lock = NSRecursiveLock()
-
-        var isRunning = false
-
-        func setRunning(_ newValue: Bool) {
+        
+        var isActive = false
+        
+        func setActive(_ newValue: Bool) {
             lock.lock()
             defer {
                 lock.unlock()
             }
-
-            isRunning = newValue
+            
+            isActive = newValue
         }
-
+        
         return self
-            .filter { _ in
-                !isRunning
-            }
+            .filter { _ in !isActive }
             .flatMap { output in
                 transform(output)
                     .handleEvents(receiveSubscription: { _ in
-                        setRunning(true)
+                        setActive(true)
                     }, receiveCompletion: { _ in
-                        setRunning(false)
+                        setActive(false)
                     }, receiveCancel: {
-                        setRunning(false)
+                        setActive(false)
                     })
             }
     }

@@ -14,7 +14,7 @@ import Combine
 public extension Publisher where Output: Hashable {
     func removeAllDuplicates() -> Publishers.Filter<Self> {
         var uniqueOutputs = Set<Output>()
-
+        
         return self.filter { uniqueOutputs.insert($0).inserted }
     }
 }
@@ -30,13 +30,13 @@ public extension Publisher where Output: Equatable {
 public extension Publisher {
     func removeAllDuplicates(by predicate: @escaping (Output, Output) -> Bool) -> Publishers.Filter<Self> {
         var uniqueOutputs = [Output]()
-
+        
         return self.filter { element in
             if uniqueOutputs.contains(where: { predicate($0, element) }) {
                 return false
             } else {
                 uniqueOutputs.append(element)
-
+                
                 return true
             }
         }
